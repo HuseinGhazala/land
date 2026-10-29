@@ -1,0 +1,19 @@
+# Scratch Scripts & Temporary Test Files
+*.py
+*.log
+*.html
+!index.html
+api_response.json
+*.png
+!assets/**/*.png
+!assets/**/*.jpg
+!assets/**/*.svg
+card_*.png
+cache_thumbs/
+extracted_cache_images/
+
+# Editor & OS files
+.idea/
+.vscode/
+.DS_Store
+Thumbs.db
