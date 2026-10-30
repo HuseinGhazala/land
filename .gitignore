@@ -3,6 +3,8 @@
 *.log
 *.html
 !index.html
+!snap.html
+!google.html
 api_response.json
 *.png
 !assets/**/*.png

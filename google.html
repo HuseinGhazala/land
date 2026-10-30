@@ -1,0 +1,1443 @@
+<!doctype html>
+<html lang="ar" dir="rtl">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>
+      الإجازة الذهبية | Golden Vacation — الحياة تجارب وإجازتك أجمل تجربة
+    </title>
+    <meta
+      name="description"
+      content="عروض وإجازات فريدة لأجمل الوجهات السياحية، صممت بعناية لتمنحك سياحة مخصصة تمنحك الراحة وتملأ أيامك بذكريات لا تُنسى."
+    />
+
+    <!-- Favicon -->
+    <link rel="icon" type="image/svg+xml" href="assets/logo.svg" />
+
+    <!-- Google Fonts: Cairo & Montserrat -->
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Cairo:wght@400;500;600;700;800;900&family=Montserrat:wght@500;600;700;800&display=swap"
+      rel="stylesheet"
+    />
+
+    <!-- Stylesheet -->
+    <link rel="stylesheet" href="styles.css?v=4.0" />
+  </head>
+  <body data-source="google">
+    <!-- ========================================================================
+       Header / Navbar
+       ======================================================================== -->
+    <header class="site-header">
+      <div class="container nav-container">
+        <!-- Right: Brand Logo -->
+        <a
+          href="#hero"
+          class="brand-link"
+          aria-label="الإجازة الذهبية الرئيسية"
+        >
+          <img
+            src="assets/logo_original.png"
+            alt="شعار الإجازة الذهبية Golden Vacation"
+            class="brand-logo-img"
+          />
+        </a>
+
+        <!-- Center: Navigation Links -->
+        <nav aria-label="القائمة الرئيسية">
+          <ul class="nav-menu" id="navMenu">
+            <li><a href="#hero" class="nav-link active">الرئيسية</a></li>
+            <li>
+              <a href="#destinations" class="nav-link">البرامج السياحية</a>
+            </li>
+            <li><a href="#features" class="nav-link">مميزاتنا</a></li>
+            <li><a href="#testimonials" class="nav-link">آراء العملاء</a></li>
+            <li><a href="#booking" class="nav-link">تواصل معنا</a></li>
+          </ul>
+        </nav>
+
+        <!-- Left: CTA Action Button & Mobile Toggle -->
+        <div class="nav-actions">
+          <a href="#booking" class="btn-primary">
+            <span>خطط لإجازتك</span>
+            <svg
+              class="arrow-icon"
+              viewBox="0 0 24 24"
+              fill="none"
+              stroke="currentColor"
+              stroke-width="2.5"
+              stroke-linecap="round"
+              stroke-linejoin="round"
+            >
+              <line x1="17" y1="7" x2="7" y2="17"></line>
+              <polyline points="17 17 7 17 7 7"></polyline>
+            </svg>
+          </a>
+
+          <button
+            class="mobile-toggle"
+            id="mobileToggle"
+            aria-label="فتح القائمة"
+            aria-expanded="false"
+          >
+            <span></span>
+            <span></span>
+            <span></span>
+          </button>
+        </div>
+      </div>
+    </header>
+
+    <!-- ========================================================================
+       Hero Section
+       ======================================================================== -->
+    <section class="hero-section" id="hero">
+      <div class="hero-bg-container">
+        <img
+          src="assets/images/hero_original.png"
+          alt="بحيرة جبلية ساحرة مع قارب تجديف"
+          class="hero-bg-image"
+        />
+        <div class="hero-gradient-overlay"></div>
+      </div>
+
+      <div class="container hero-container">
+        <div class="hero-content">
+          <h1 class="hero-title">
+            <span class="title-white">الحياة تجارب...</span>
+            <span class="title-gold">وإجازتك أجمل تجربة.</span>
+          </h1>
+          <p class="hero-subtitle">
+            عروض وإجازات فريدة لأجمل الوجهات السياحية، صممت بعناية لتمنحك سياحة
+            مخصصة تمنحك الراحة وتملأ أيامك بذكريات لا تُنسى.
+          </p>
+
+          <div class="hero-cta-group">
+            <a href="#destinations" class="btn-primary">
+              <span>اكتشف وجهتك</span>
+              <svg
+                class="arrow-icon"
+                viewBox="0 0 24 24"
+                fill="none"
+                stroke="currentColor"
+                stroke-width="2.5"
+                stroke-linecap="round"
+                stroke-linejoin="round"
+              >
+                <line x1="17" y1="7" x2="7" y2="17"></line>
+                <polyline points="17 17 7 17 7 7"></polyline>
+              </svg>
+            </a>
+
+            <a href="#booking" class="hero-link-secondary">
+              <span>خلّنا نخطط لك عنها</span>
+              <svg
+                width="18"
+                height="18"
+                viewBox="0 0 24 24"
+                fill="none"
+                stroke="currentColor"
+                stroke-width="2.2"
+                stroke-linecap="round"
+                stroke-linejoin="round"
+              >
+                <polyline points="15 18 9 12 15 6"></polyline>
+              </svg>
+            </a>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- ========================================================================
+       Destinations Section ("لكل وجهة ، ألف حكاية.")
+       ======================================================================== -->
+    <section class="destinations-section" id="destinations">
+      <div class="container">
+        <!-- Section Header -->
+        <div class="section-header-row">
+          <div class="section-title-wrap">
+            <h2 class="section-heading">
+              لكل وجهة ، <span class="gold-highlight">ألف حكاية.</span>
+            </h2>
+          </div>
+
+          <div class="section-desc-wrap">
+            <p class="section-subtext">
+              سواء كنت تبحث عن مغامرة وسط الطبيعة، أو استرخاء على الشاطئ، أو
+              اكتشاف ثقافات جديدة... فيه وجهة تنتظرك.
+            </p>
+          </div>
+        </div>
+
+        <!-- Slider Controls & Mouse Swipe Hint -->
+        <div class="destinations-toolbar">
+          <div class="dest-swipe-hint">
+            <span class="swipe-badge">7 باقات استثنائية</span>
+            <!-- <span class="swipe-text">
+              <svg
+                width="18"
+                height="18"
+                viewBox="0 0 24 24"
+                fill="none"
+                stroke="currentColor"
+                stroke-width="2"
+                stroke-linecap="round"
+                stroke-linejoin="round"
+              >
+                <polyline points="17 11 12 6 7 11"></polyline>
+                <polyline points="17 18 12 13 7 18"></polyline>
+              </svg>
+            </span> -->
+          </div>
+
+          <div class="dest-slider-arrows">
+            <button
+              class="slider-arrow-btn prev"
+              id="destPrevBtn"
+              aria-label="الباقة السابقة"
+              title="السابق"
+            >
+              <svg
+                width="20"
+                height="20"
+                viewBox="0 0 24 24"
+                fill="none"
+                stroke="currentColor"
+                stroke-width="2.2"
+                stroke-linecap="round"
+                stroke-linejoin="round"
+              >
+                <polyline points="9 18 15 12 9 6"></polyline>
+              </svg>
+            </button>
+            <button
+              class="slider-arrow-btn next"
+              id="destNextBtn"
+              aria-label="الباقة التالية"
+              title="التالي"
+            >
+              <svg
+                width="20"
+                height="20"
+                viewBox="0 0 24 24"
+                fill="none"
+                stroke="currentColor"
+                stroke-width="2.2"
+                stroke-linecap="round"
+                stroke-linejoin="round"
+              >
+                <polyline points="15 18 9 12 15 6"></polyline>
+              </svg>
+            </button>
+          </div>
+        </div>
+
+        <!-- 7 Destination Packages Carousel Grid (RTL) -->
+        <div class="destinations-grid" id="destinationsGrid">
+          <!-- Package 1: South Korea (كوريا الجنوبية) -->
+          <article
+            class="destination-card"
+            data-destination="korea"
+            data-category="asia"
+            tabindex="0"
+            role="button"
+            aria-label="تفاصيل باقة كوريا الجنوبية"
+          >
+            <div class="card-img-wrapper">
+              <img
+                src="assets/images/dest_korea_original.jpg"
+                alt="كوريا الجنوبية — سيول وبوسان"
+                class="card-img"
+                loading="lazy"
+              />
+            </div>
+            <div class="card-overlay"></div>
+            <div class="card-content">
+              <div class="card-top-row">
+                <div class="card-tag">01 / EAST ASIA</div>
+                <div class="card-duration-badge">7 ليالي</div>
+              </div>
+              <div class="card-footer-info">
+                <div class="card-text-block">
+                  <div class="card-subtitle">سيول العصرية وشواطئ بوسان</div>
+                  <h3 class="card-title">كوريا الجنوبية</h3>
+                  <div class="card-price-tag">
+                    <span class="price-num">9,900</span>
+                    <span class="price-curr">ر.س / لشخصين</span>
+                  </div>
+                </div>
+                <div
+                  class="card-action-btn"
+                  aria-hidden="true"
+                  title="عرض التفاصيل"
+                >
+                  <svg
+                    width="18"
+                    height="18"
+                    viewBox="0 0 24 24"
+                    fill="none"
+                    stroke="currentColor"
+                    stroke-width="2"
+                    stroke-linecap="round"
+                    stroke-linejoin="round"
+                  >
+                    <line x1="17" y1="7" x2="7" y2="17"></line>
+                    <polyline points="17 17 7 17 7 7"></polyline>
+                  </svg>
+                </div>
+              </div>
+            </div>
+          </article>
+
+          <!-- Package 2: Maldives (المالديف) -->
+          <article
+            class="destination-card"
+            data-destination="maldives"
+            data-category="islands honeymoon"
+            tabindex="0"
+            role="button"
+            aria-label="تفاصيل باقة المالديف"
+          >
+            <div class="card-img-wrapper">
+              <img
+                src="assets/images/dest_maldives_original.jpg"
+                alt="فيلا بمسبح خاص في المالديف"
+                class="card-img"
+                loading="lazy"
+              />
+            </div>
+            <div class="card-overlay"></div>
+            <div class="card-content">
+              <div class="card-top-row">
+                <div class="card-tag">02 / INDIAN OCEAN</div>
+                <div class="card-duration-badge">4 ليالي</div>
+              </div>
+              <div class="card-footer-info">
+                <div class="card-text-block">
+                  <div class="card-subtitle">فيلا بمسبح ومياه فيروزية</div>
+                  <h3 class="card-title">المالديف</h3>
+                  <div class="card-price-tag">
+                    <span class="price-num">14,620</span>
+                    <span class="price-curr">ر.س / لشخصين</span>
+                  </div>
+                </div>
+                <div
+                  class="card-action-btn"
+                  aria-hidden="true"
+                  title="عرض التفاصيل"
+                >
+                  <svg
+                    width="18"
+                    height="18"
+                    viewBox="0 0 24 24"
+                    fill="none"
+                    stroke="currentColor"
+                    stroke-width="2"
+                    stroke-linecap="round"
+                    stroke-linejoin="round"
+                  >
+                    <line x1="17" y1="7" x2="7" y2="17"></line>
+                    <polyline points="17 17 7 17 7 7"></polyline>
+                  </svg>
+                </div>
+              </div>
+            </div>
+          </article>
+
+          <!-- Package 3: London (لندن) -->
+          <article
+            class="destination-card"
+            data-destination="london"
+            data-category="europe"
+            tabindex="0"
+            role="button"
+            aria-label="تفاصيل باقة لندن"
+          >
+            <div class="card-img-wrapper">
+              <img
+                src="assets/images/dest_london_original.jpg"
+                alt="معالم لندن وساعة بيج بن"
+                class="card-img"
+                loading="lazy"
+              />
+            </div>
+            <div class="card-overlay"></div>
+            <div class="card-content">
+              <div class="card-top-row">
+                <div class="card-tag">03 / EUROPE</div>
+                <div class="card-duration-badge">4 ليالي</div>
+              </div>
+              <div class="card-footer-info">
+                <div class="card-text-block">
+                  <div class="card-subtitle">إقامة فندق The Cumberland</div>
+                  <h3 class="card-title">لندن</h3>
+                  <div class="card-price-tag">
+                    <span class="price-num">6,530</span>
+                    <span class="price-curr">ر.س / لشخصين</span>
+                  </div>
+                </div>
+                <div
+                  class="card-action-btn"
+                  aria-hidden="true"
+                  title="عرض التفاصيل"
+                >
+                  <svg
+                    width="18"
+                    height="18"
+                    viewBox="0 0 24 24"
+                    fill="none"
+                    stroke="currentColor"
+                    stroke-width="2"
+                    stroke-linecap="round"
+                    stroke-linejoin="round"
+                  >
+                    <line x1="17" y1="7" x2="7" y2="17"></line>
+                    <polyline points="17 17 7 17 7 7"></polyline>
+                  </svg>
+                </div>
+              </div>
+            </div>
+          </article>
+
+          <!-- Package 4: Norway (النرويج) -->
+          <article
+            class="destination-card"
+            data-destination="norway"
+            data-category="europe"
+            tabindex="0"
+            role="button"
+            aria-label="تفاصيل رحلة النرويج"
+          >
+            <div class="card-img-wrapper">
+              <img
+                src="assets/images/dest_norway_original.png"
+                alt="أضواء الشفق القطبي في النرويج"
+                class="card-img"
+                loading="lazy"
+              />
+            </div>
+            <div class="card-overlay"></div>
+            <div class="card-content">
+              <div class="card-top-row">
+                <div class="card-tag">04 / SCANDINAVIA</div>
+                <div class="card-duration-badge">7 ليالي</div>
+              </div>
+              <div class="card-footer-info">
+                <div class="card-text-block">
+                  <div class="card-subtitle">من أوسلو لترومسو والشفق</div>
+                  <h3 class="card-title">النرويج</h3>
+                  <div class="card-price-tag">
+                    <span class="price-num">9,950</span>
+                    <span class="price-curr">ر.س / لشخصين</span>
+                  </div>
+                </div>
+                <div
+                  class="card-action-btn"
+                  aria-hidden="true"
+                  title="عرض التفاصيل"
+                >
+                  <svg
+                    width="18"
+                    height="18"
+                    viewBox="0 0 24 24"
+                    fill="none"
+                    stroke="currentColor"
+                    stroke-width="2"
+                    stroke-linecap="round"
+                    stroke-linejoin="round"
+                  >
+                    <line x1="17" y1="7" x2="7" y2="17"></line>
+                    <polyline points="17 17 7 17 7 7"></polyline>
+                  </svg>
+                </div>
+              </div>
+            </div>
+          </article>
+
+          <!-- Package 5: Thailand (تايلاند — شهر عسل) -->
+          <article
+            class="destination-card"
+            data-destination="thailand"
+            data-category="asia honeymoon"
+            tabindex="0"
+            role="button"
+            aria-label="تفاصيل باقة تايلاند شهر عسل"
+          >
+            <div class="card-img-wrapper">
+              <img
+                src="assets/images/dest_thailand_original.png"
+                alt="بانكوك وبوكيت في تايلاند"
+                class="card-img"
+                loading="lazy"
+              />
+            </div>
+            <div class="card-overlay"></div>
+            <div class="card-content">
+              <div class="card-top-row">
+                <div class="card-tag">05 / HONEYMOON</div>
+                <div class="card-duration-badge">شهر عسل - 8 ليالي</div>
+              </div>
+              <div class="card-footer-info">
+                <div class="card-text-block">
+                  <div class="card-subtitle">بانكوك وبوكيت وفيلا بمسبح</div>
+                  <h3 class="card-title">تايلاند</h3>
+                  <div class="card-price-tag">
+                    <span class="price-num">6,180</span>
+                    <span class="price-curr">ر.س / لشخصين</span>
+                  </div>
+                </div>
+                <div
+                  class="card-action-btn"
+                  aria-hidden="true"
+                  title="عرض التفاصيل"
+                >
+                  <svg
+                    width="18"
+                    height="18"
+                    viewBox="0 0 24 24"
+                    fill="none"
+                    stroke="currentColor"
+                    stroke-width="2"
+                    stroke-linecap="round"
+                    stroke-linejoin="round"
+                  >
+                    <line x1="17" y1="7" x2="7" y2="17"></line>
+                    <polyline points="17 17 7 17 7 7"></polyline>
+                  </svg>
+                </div>
+              </div>
+            </div>
+          </article>
+
+          <!-- Package 6: Georgia (جورجيا) -->
+          <article
+            class="destination-card"
+            data-destination="georgia"
+            data-category="europe"
+            tabindex="0"
+            role="button"
+            aria-label="تفاصيل رحلة جورجيا"
+          >
+            <div class="card-img-wrapper">
+              <img
+                src="assets/images/dest_georgia_original.png"
+                alt="مدينة تبليسي وجبال جورجيا"
+                class="card-img"
+                loading="lazy"
+              />
+            </div>
+            <div class="card-overlay"></div>
+            <div class="card-content">
+              <div class="card-top-row">
+                <div class="card-tag">06 / CAUCASUS</div>
+                <div class="card-duration-badge">7 ليالي</div>
+              </div>
+              <div class="card-footer-info">
+                <div class="card-text-block">
+                  <div class="card-subtitle">تبليسي وباكورياني وسحر باتومي</div>
+                  <h3 class="card-title">جورجيا</h3>
+                  <div class="card-price-tag">
+                    <span class="price-num">3,650</span>
+                    <span class="price-curr">ر.س / لشخصين</span>
+                  </div>
+                </div>
+                <div
+                  class="card-action-btn"
+                  aria-hidden="true"
+                  title="عرض التفاصيل"
+                >
+                  <svg
+                    width="18"
+                    height="18"
+                    viewBox="0 0 24 24"
+                    fill="none"
+                    stroke="currentColor"
+                    stroke-width="2"
+                    stroke-linecap="round"
+                    stroke-linejoin="round"
+                  >
+                    <line x1="17" y1="7" x2="7" y2="17"></line>
+                    <polyline points="17 17 7 17 7 7"></polyline>
+                  </svg>
+                </div>
+              </div>
+            </div>
+          </article>
+
+          <!-- Package 7: Mauritius (موريشيوس) -->
+          <article
+            class="destination-card"
+            data-destination="mauritius"
+            data-category="islands"
+            tabindex="0"
+            role="button"
+            aria-label="تفاصيل رحلة موريشيوس"
+          >
+            <div class="card-img-wrapper">
+              <img
+                src="assets/images/dest_mauritius_original.png"
+                alt="منتجعات موريشيوس الفاخرة والمحيط"
+                class="card-img"
+                loading="lazy"
+              />
+            </div>
+            <div class="card-overlay"></div>
+            <div class="card-content">
+              <div class="card-top-row">
+                <div class="card-tag">07 / INDIAN OCEAN</div>
+                <div class="card-duration-badge">5 ليالي</div>
+              </div>
+              <div class="card-footer-info">
+                <div class="card-text-block">
+                  <div class="card-subtitle">جناح بإطلالة محيط وجولات خاصة</div>
+                  <h3 class="card-title">موريشيوس</h3>
+                  <div class="card-price-tag">
+                    <span class="price-num">11,650</span>
+                    <span class="price-curr">ر.س / لشخصين</span>
+                  </div>
+                </div>
+                <div
+                  class="card-action-btn"
+                  aria-hidden="true"
+                  title="عرض التفاصيل"
+                >
+                  <svg
+                    width="18"
+                    height="18"
+                    viewBox="0 0 24 24"
+                    fill="none"
+                    stroke="currentColor"
+                    stroke-width="2"
+                    stroke-linecap="round"
+                    stroke-linejoin="round"
+                  >
+                    <line x1="17" y1="7" x2="7" y2="17"></line>
+                    <polyline points="17 17 7 17 7 7"></polyline>
+                  </svg>
+                </div>
+              </div>
+            </div>
+          </article>
+        </div>
+      </div>
+    </section>
+
+    <!-- ========================================================================
+       Features Section ("تفاصيل صغيرة، تفرق في الرحلة.")
+       ======================================================================== -->
+    <section class="features-section" id="features">
+      <div class="container features-layout">
+        <!-- Right Column: Heading & Description -->
+        <div class="features-text-col">
+          <h2 class="features-heading">
+            <span class="line-dark">تفاصيل صغيرة،</span>
+            <span class="line-gold">تفرق في الرحلة.</span>
+          </h2>
+          <p class="features-desc">
+            خلّ اختيار الوجهة علينا، وقل لنا وش تتخيل لإجازتك. نساعدك تتعرف على
+            البرامج المتاحة وتفاصيل كل رحلة قبل ما تقرر.
+          </p>
+          <a href="#booking" class="btn-primary">
+            <span>اعرف البرامج المتاحة</span>
+            <svg
+              class="arrow-icon"
+              viewBox="0 0 24 24"
+              fill="none"
+              stroke="currentColor"
+              stroke-width="2.5"
+              stroke-linecap="round"
+              stroke-linejoin="round"
+            >
+              <line x1="17" y1="7" x2="7" y2="17"></line>
+              <polyline points="17 17 7 17 7 7"></polyline>
+            </svg>
+          </a>
+        </div>
+
+        <!-- Left Column: 3 Feature Rows -->
+        <div class="features-list">
+          <!-- Feature 1 -->
+          <div
+            class="feature-item-card"
+            onclick="
+              document
+                .getElementById('booking')
+                .scrollIntoView({ behavior: 'smooth' })
+            "
+          >
+            <div class="feature-info">
+              <div class="feature-header-line">
+                <h3 class="feature-name">رحلات الشواطئ والاسترخاء</h3>
+                <span class="feature-num">01</span>
+              </div>
+              <p class="feature-summary">
+                للي يبغون يبعدون عن الزحمة ويستمتعون بالبحر.
+              </p>
+            </div>
+            <div class="feature-arrow-btn" aria-hidden="true">
+              <svg
+                width="16"
+                height="16"
+                viewBox="0 0 24 24"
+                fill="none"
+                stroke="currentColor"
+                stroke-width="2"
+                stroke-linecap="round"
+                stroke-linejoin="round"
+              >
+                <line x1="17" y1="7" x2="7" y2="17"></line>
+                <polyline points="17 17 7 17 7 7"></polyline>
+              </svg>
+            </div>
+          </div>
+
+          <!-- Feature 2 -->
+          <div
+            class="feature-item-card"
+            onclick="
+              document
+                .getElementById('booking')
+                .scrollIntoView({ behavior: 'smooth' })
+            "
+          >
+            <div class="feature-info">
+              <div class="feature-header-line">
+                <h3 class="feature-name">رحلات الطبيعة والمغامرات</h3>
+                <span class="feature-num">02</span>
+              </div>
+              <p class="feature-summary">
+                مناظر تخطف الأنفاس وتجارب خارج المعتاد.
+              </p>
+            </div>
+            <div class="feature-arrow-btn" aria-hidden="true">
+              <svg
+                width="16"
+                height="16"
+                viewBox="0 0 24 24"
+                fill="none"
+                stroke="currentColor"
+                stroke-width="2"
+                stroke-linecap="round"
+                stroke-linejoin="round"
+              >
+                <line x1="17" y1="7" x2="7" y2="17"></line>
+                <polyline points="17 17 7 17 7 7"></polyline>
+              </svg>
+            </div>
+          </div>
+
+          <!-- Feature 3 -->
+          <div
+            class="feature-item-card"
+            onclick="
+              document
+                .getElementById('booking')
+                .scrollIntoView({ behavior: 'smooth' })
+            "
+          >
+            <div class="feature-info">
+              <div class="feature-header-line">
+                <h3 class="feature-name">رحلات العائلة والأصدقاء</h3>
+                <span class="feature-num">03</span>
+              </div>
+              <p class="feature-summary">وقت أجمل مع الناس اللي تحبهم.</p>
+            </div>
+            <div class="feature-arrow-btn" aria-hidden="true">
+              <svg
+                width="16"
+                height="16"
+                viewBox="0 0 24 24"
+                fill="none"
+                stroke="currentColor"
+                stroke-width="2"
+                stroke-linecap="round"
+                stroke-linejoin="round"
+              >
+                <line x1="17" y1="7" x2="7" y2="17"></line>
+                <polyline points="17 17 7 17 7 7"></polyline>
+              </svg>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- ========================================================================
+       Testimonials Section ("أجمل الذكريات، تبدأ بثقة.")
+       ======================================================================== -->
+    <section class="testimonials-section" id="testimonials">
+      <div class="container">
+        <!-- Section Header -->
+        <div class="testimonials-header">
+          <h2 class="testimonials-heading">
+            <span class="line-white">أجمل الذكريات،</span>
+            <span class="line-gold">تبدأ بثقة.</span>
+          </h2>
+          <p class="testimonials-subtext">
+            نؤمن أن التجربة المميزة تبدأ من التخطيط المريح. تعرف على تقييمات
+            عملاء الإجازة الذهبية.
+          </p>
+        </div>
+
+        <!-- Testimonial Carousel Card -->
+        <div class="testimonial-card-main">
+          <!-- Right Main Body -->
+          <div class="testimonial-body">
+            <div class="stars-row" aria-label="تقييم 5 نجوم">★★★★★</div>
+            <div class="quote-icon-decor">”</div>
+            <p class="testimonial-quote-text" id="testimonialQuote">
+              مساحة مخصصة لعرض رأي عميل حقيقي عن تجربته مع الإجازة الذهبية.
+              الخدمة كانت تفوق التوقعات والاهتمام بأدق التفاصيل من الاستقبال
+              وحتى العودة صنع الفرق في إجازتنا.
+            </p>
+
+            <div class="author-row">
+              <div class="author-info">
+                <div class="author-name" id="authorName">عبدالله الشمري</div>
+                <div class="author-destination" id="authorDest">
+                  — مسافر إلى النرويج
+                </div>
+              </div>
+
+              <!-- Navigation Controls -->
+              <div class="carousel-nav-btns">
+                <button
+                  class="nav-circle-btn"
+                  id="prevTestimonial"
+                  aria-label="الرأي السابق"
+                >
+                  <svg
+                    width="20"
+                    height="20"
+                    viewBox="0 0 24 24"
+                    fill="none"
+                    stroke="currentColor"
+                    stroke-width="2.2"
+                    stroke-linecap="round"
+                    stroke-linejoin="round"
+                  >
+                    <polyline points="9 18 15 12 9 6"></polyline>
+                  </svg>
+                </button>
+                <button
+                  class="nav-circle-btn"
+                  id="nextTestimonial"
+                  aria-label="الرأي التالي"
+                >
+                  <svg
+                    width="20"
+                    height="20"
+                    viewBox="0 0 24 24"
+                    fill="none"
+                    stroke="currentColor"
+                    stroke-width="2.2"
+                    stroke-linecap="round"
+                    stroke-linejoin="round"
+                  >
+                    <polyline points="15 18 9 12 15 6"></polyline>
+                  </svg>
+                </button>
+              </div>
+            </div>
+          </div>
+
+          <!-- Left Side Label -->
+          <div class="testimonial-side-label">
+            <span>آراء</span>
+            <span>عملائنا</span>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- ========================================================================
+       Booking & Consultation Section ("إجازتك الجاية؟ خلّنا نرتبها.")
+       ======================================================================== -->
+    <section class="booking-section" id="booking">
+      <div class="container booking-layout">
+        <!-- Right Column: Heading & WhatsApp CTA -->
+        <div class="booking-text-col">
+          <h2 class="booking-heading">
+            <span class="line-dark">إجازتك الجاية؟</span>
+            <span class="line-gold">خلّنا نرتبها.</span>
+          </h2>
+          <p class="booking-desc">
+            عبّ بياناتك، وفريقنا يتواصل معك عشان يساعدك تختار الوجهة والبرنامج
+            الأنسب لك بكل راحة وسهولة.
+          </p>
+
+          <!-- Trust Indicator Box -->
+          <div class="trust-badge-box">
+            <div class="trust-dot"></div>
+            <div>
+              <div class="trust-title">خطوتك الأولى بسيطة</div>
+              <div class="trust-subtitle">أرسل طلبك، وخل الباقي علينا.</div>
+            </div>
+          </div>
+
+          <!-- WhatsApp Quick Link -->
+          <a
+            href="https://wa.me/966551433434?text=%D9%85%D8%B1%D8%AD%D8%A8%D8%A7%D9%8B%D8%8C%20%D8%A3%D8%B1%D8%BA%D8%A8%20%D8%A8%D8%A7%D9%84%D8%A7%D8%B3%D8%AA%D9%81%D8%B3%D8%A7%D8%B1%20%D8%B9%D9%86%20%D8%A8%D8%B1%D8%A7%D9%85%D8%AC%20%D8%A7%D9%84%D8%A5%D8%AC%D8%A7%D8%B2%D8%A9%20%D8%A7%D9%84%D8%B0%D9%87%D8%A8%D9%8A%D8%A9%20%7BG2%7D"
+            target="_blank"
+            rel="noopener noreferrer"
+            class="whatsapp-direct-btn"
+            id="directWhatsappBtn"
+          >
+            <svg width="22" height="22" viewBox="0 0 24 24" fill="currentColor">
+              <path
+                d="M.057 24l1.687-6.163c-1.041-1.804-1.588-3.849-1.587-5.946.003-6.556 5.338-11.891 11.893-11.891 3.181.001 6.167 1.24 8.413 3.488 2.245 2.248 3.481 5.236 3.48 8.414-.003 6.557-5.338 11.892-11.893 11.892-1.99-.001-3.951-.5-5.688-1.448l-6.305 1.654zm6.597-3.807c1.676.995 3.276 1.591 5.392 1.592 5.448 0 9.886-4.434 9.889-9.885.002-5.462-4.415-9.89-9.881-9.892-5.452 0-9.887 4.434-9.889 9.884-.001 2.225.651 3.891 1.746 5.634l-.999 3.648 3.742-.981zm11.387-5.464c-.074-.124-.272-.198-.57-.347-.297-.149-1.758-.868-2.031-.967-.272-.099-.47-.149-.669.149-.198.297-.768.967-.941 1.165-.173.198-.347.223-.644.074-.297-.149-1.255-.462-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.297-.347.446-.521.151-.172.2-.296.3-.495.099-.198.05-.372-.025-.521-.075-.148-.669-1.611-.916-2.206-.242-.579-.487-.501-.669-.51l-.57-.01c-.198 0-.52.074-.792.372s-1.04 1.016-1.04 2.479 1.065 2.876 1.213 3.074c.149.198 2.095 3.2 5.076 4.487.709.306 1.263.489 1.694.626.712.226 1.36.194 1.872.118.571-.085 1.758-.719 2.006-1.413.248-.695.248-1.29.173-1.414z"
+              />
+            </svg>
+            <span>تواصل سريع عبر واتساب</span>
+          </a>
+        </div>
+
+        <!-- Left Column: Interactive Booking Form -->
+        <div class="form-card">
+          <div class="form-header">
+            <h3 class="form-title">خلّنا نعرف وش يناسبك</h3>
+            <span class="form-step-tag">1 / 1</span>
+          </div>
+
+          <form class="booking-form" id="bookingForm" novalidate>
+            <!-- Full Name -->
+            <div class="form-group">
+              <label for="fullName" class="form-label"
+                >الاسم الكامل <span class="required-badge">*</span></label
+              >
+              <input
+                type="text"
+                id="fullName"
+                class="form-input"
+                placeholder="اكتب اسمك هنا"
+                required
+                autocomplete="name"
+              />
+              <div
+                class="form-field-error"
+                id="nameError"
+                style="display: none"
+              ></div>
+            </div>
+
+            <!-- Phone Number -->
+            <div class="form-group">
+              <label for="phoneNumber" class="form-label"
+                >رقم الجوال <span class="required-badge">* (مطلوب)</span></label
+              >
+              <input
+                type="tel"
+                id="phoneNumber"
+                class="form-input"
+                placeholder="+966 5X XXX XXXX"
+                dir="ltr"
+                style="text-align: right"
+                required
+                pattern="^(\+?966|00966|0)?5[0-9]{8}$"
+                inputmode="tel"
+                autocomplete="tel"
+              />
+              <div
+                class="form-field-error"
+                id="phoneError"
+                style="display: none"
+              ></div>
+            </div>
+
+            <!-- Destination & Travelers (2 cols) -->
+            <div class="form-row-2">
+              <div class="form-group">
+                <label for="destinationSelect" class="form-label"
+                  >الوجهة المفضلة</label
+                >
+                <select id="destinationSelect" class="form-select" required>
+                  <option value="" disabled selected>
+                    اختر الوجهة أو الباقة
+                  </option>
+                  <option value="korea">
+                    كوريا الجنوبية (7 ليالي — 9,900 ر.س)
+                  </option>
+                  <option value="maldives">
+                    المالديف (4 ليالي — 14,620 ر.س)
+                  </option>
+                  <option value="london">لندن (4 ليالي — 6,530 ر.س)</option>
+                  <option value="norway">النرويج (7 ليالي — 9,950 ر.س)</option>
+                  <option value="thailand">
+                    تايلاند — شهر عسل (8 ليالي — 6,180 ر.س)
+                  </option>
+                  <option value="georgia">جورجيا (7 ليالي — 3,650 ر.س)</option>
+                  <option value="mauritius">
+                    موريشيوس (5 ليالي — 11,650 ر.س)
+                  </option>
+                  <option value="other">وجهة أخرى (حدد لاحقاً)</option>
+                </select>
+              </div>
+
+              <div class="form-group">
+                <label for="travelersSelect" class="form-label"
+                  >عدد المسافرين</label
+                >
+                <select id="travelersSelect" class="form-select" required>
+                  <option value="" disabled selected>اختر العدد</option>
+                  <option value="1">شخص واحد</option>
+                  <option value="2">شخصين</option>
+                  <option value="3-4">عائلة (3 - 4 أشخاص)</option>
+                  <option value="5+">عائلة أو مجموعة (5+ أشخاص)</option>
+                </select>
+              </div>
+            </div>
+
+            <!-- Date & Budget (2 cols) -->
+            <div class="form-row-2">
+              <div class="form-group">
+                <label for="travelDateSelect" class="form-label"
+                  >موعد السفر المتوقع</label
+                >
+                <select id="travelDateSelect" class="form-select">
+                  <option value="" disabled selected>اختر الموعد</option>
+                  <option value="soon">خلال أسبوعين</option>
+                  <option value="next_month">خلال الشهر القادم</option>
+                  <option value="summer">موسم الصيف القادم</option>
+                  <option value="holidays">عطلة الأعياد</option>
+                  <option value="flexible">تاريخ مرن</option>
+                </select>
+              </div>
+
+              <div class="form-group">
+                <label for="budgetSelect" class="form-label"
+                  >الميزانية التقريبية</label
+                >
+                <select id="budgetSelect" class="form-select">
+                  <option value="" disabled selected>اختر الميزانية</option>
+                  <option value="economy">اقتصادية ومدروسة</option>
+                  <option value="comfort">متوسطة ومميزة</option>
+                  <option value="vip">فاخرة VIP</option>
+                </select>
+              </div>
+            </div>
+
+            <!-- Agreement Checkbox -->
+            <label class="form-checkbox-label">
+              <input
+                type="checkbox"
+                id="agreementCheckbox"
+                class="form-checkbox"
+                required
+                checked
+              />
+              <span>أوافق على التواصل معي بخصوص طلب الرحلة.</span>
+            </label>
+
+            <!-- Submit Button -->
+            <button type="submit" class="btn-primary btn-submit-booking">
+              <span>أرسل طلبك</span>
+              <svg
+                class="arrow-icon"
+                viewBox="0 0 24 24"
+                fill="none"
+                stroke="currentColor"
+                stroke-width="2.5"
+                stroke-linecap="round"
+                stroke-linejoin="round"
+              >
+                <line x1="17" y1="7" x2="7" y2="17"></line>
+                <polyline points="17 17 7 17 7 7"></polyline>
+              </svg>
+            </button>
+
+            <p class="form-disclaimer">
+              هذا نموذج مخصص لربطه بنظام استقبال العملاء وتنسيق المواعيد قبل
+              النشر.
+            </p>
+          </form>
+        </div>
+      </div>
+    </section>
+
+    <!-- ========================================================================
+       Footer Section
+       ======================================================================== -->
+    <footer class="site-footer">
+      <div class="container">
+        <div class="footer-top-grid">
+          <!-- Column 1: Logo & Tagline -->
+          <div class="footer-brand-col">
+            <img
+              src="assets/logo_footer_crisp.png"
+              alt="شعار الإجازة الذهبية"
+              class="footer-logo-img"
+            />
+            <p class="footer-brand-desc">الإجازة الذهبية للسفر والسياحة</p>
+
+            <!-- Social Media Links (Horizontal) -->
+            <div
+              class="footer-social-links"
+              style="
+                display: flex;
+                flex-direction: row;
+                align-items: center;
+                justify-content: flex-start;
+                gap: 10px;
+                margin-top: 1.25rem;
+                flex-wrap: nowrap;
+              "
+              aria-label="قنوات التواصل الاجتماعي"
+            >
+              <a
+                href="https://www.instagram.com/goldenvac_sa/"
+                target="_blank"
+                rel="noopener noreferrer"
+                class="social-icon-btn"
+                style="
+                  display: inline-flex;
+                  align-items: center;
+                  justify-content: center;
+                  width: 38px;
+                  height: 38px;
+                  flex-shrink: 0;
+                "
+                aria-label="إنستغرام — الإجازة الذهبية"
+                title="إنستغرام"
+              >
+                <svg
+                  width="18"
+                  height="18"
+                  viewBox="0 0 24 24"
+                  fill="none"
+                  stroke="currentColor"
+                  stroke-width="2"
+                  stroke-linecap="round"
+                  stroke-linejoin="round"
+                >
+                  <rect x="2" y="2" width="20" height="20" rx="5" ry="5"></rect>
+                  <path
+                    d="M16 11.37A4 4 0 1 1 12.63 8 4 4 0 0 1 16 11.37z"
+                  ></path>
+                  <line x1="17.5" y1="6.5" x2="17.51" y2="6.5"></line>
+                </svg>
+              </a>
+
+              <a
+                href="https://x.com/goldenvac_sa"
+                target="_blank"
+                rel="noopener noreferrer"
+                class="social-icon-btn"
+                style="
+                  display: inline-flex;
+                  align-items: center;
+                  justify-content: center;
+                  width: 38px;
+                  height: 38px;
+                  flex-shrink: 0;
+                "
+                aria-label="منصة إكس (تويتر) — الإجازة الذهبية"
+                title="منصة إكس"
+              >
+                <svg
+                  width="17"
+                  height="17"
+                  viewBox="0 0 24 24"
+                  fill="currentColor"
+                >
+                  <path
+                    d="M18.244 2.25h3.308l-7.227 8.26 8.502 11.24H16.17l-5.214-6.817L4.99 21.75H1.68l7.73-8.835L1.254 2.25H8.08l4.713 6.231zm-1.161 17.52h1.833L7.084 4.126H5.117z"
+                  />
+                </svg>
+              </a>
+
+              <a
+                href="https://www.snapchat.com/@goldenvac_sa"
+                target="_blank"
+                rel="noopener noreferrer"
+                class="social-icon-btn"
+                style="
+                  display: inline-flex;
+                  align-items: center;
+                  justify-content: center;
+                  width: 38px;
+                  height: 38px;
+                  flex-shrink: 0;
+                "
+                aria-label="سناب شات — الإجازة الذهبية"
+                title="سناب شات"
+              >
+                <svg
+                  width="18"
+                  height="18"
+                  viewBox="0 0 24 24"
+                  fill="currentColor"
+                >
+                  <path
+                    d="M12.004 2c-3.79 0-5.88 2.63-5.88 5.6 0 1.25.39 2.45.67 3.32-.42.22-.96.55-1.47.88-.47.3-.87.64-.87 1.09 0 .58.55.93 1.39 1.15.09.43.34 1.49.52 1.94.07.17.21.31.42.36.19.04.41-.01.62-.12.63-.35 1.54-.73 2.58-.29.83.35 1.48.91 2.05.91s1.22-.56 2.05-.91c1.04-.44 1.95-.06 2.58.29.21.11.43.16.62.12.21-.05.35-.19.42-.36.18-.45.43-1.51.52-1.94.84-.22 1.39-.57 1.39-1.15 0-.45-.4-.79-.87-1.09-.51-.33-1.05-.66-1.47-.88.28-.87.67-2.07.67-3.32C17.884 4.63 15.794 2 12.004 2z"
+                  />
+                </svg>
+              </a>
+
+              <a
+                href="https://www.tiktok.com/@golden_vacation"
+                target="_blank"
+                rel="noopener noreferrer"
+                class="social-icon-btn"
+                style="
+                  display: inline-flex;
+                  align-items: center;
+                  justify-content: center;
+                  width: 38px;
+                  height: 38px;
+                  flex-shrink: 0;
+                "
+                aria-label="تيك توك — الإجازة الذهبية"
+                title="تيك توك"
+              >
+                <svg
+                  width="18"
+                  height="18"
+                  viewBox="0 0 24 24"
+                  fill="currentColor"
+                >
+                  <path
+                    d="M19.59 6.69a4.83 4.83 0 0 1-3.77-4.25V2h-3.45v13.67a2.89 2.89 0 0 1-5.2 1.74 2.89 2.89 0 0 1 2.31-4.64c.298-.002.595.042.88.13V9.4a6.33 6.33 0 0 0-1-.08A6.34 6.34 0 0 0 3 15.66a6.34 6.34 0 0 0 10.82 4.47 6.27 6.27 0 0 0 1.88-4.47V8.41a8.31 8.31 0 0 0 4.89 1.59V6.69z"
+                  />
+                </svg>
+              </a>
+
+              <a
+                href="https://www.facebook.com/goldvacati0n"
+                target="_blank"
+                rel="noopener noreferrer"
+                class="social-icon-btn"
+                style="
+                  display: inline-flex;
+                  align-items: center;
+                  justify-content: center;
+                  width: 38px;
+                  height: 38px;
+                  flex-shrink: 0;
+                "
+                aria-label="فيسبوك — الإجازة الذهبية"
+                title="فيسبوك"
+              >
+                <svg
+                  width="18"
+                  height="18"
+                  viewBox="0 0 24 24"
+                  fill="currentColor"
+                >
+                  <path
+                    d="M24 12.073c0-6.627-5.373-12-12-12s-12 5.373-12 12c0 5.99 4.388 10.954 10.125 11.854v-8.385H7.078v-3.47h3.047V9.43c0-3.007 1.792-4.669 4.533-4.669 1.312 0 2.686.235 2.686.235v2.953H15.83c-1.491 0-1.956.925-1.956 1.874v2.25h3.328l-.532 3.47h-2.796v8.385C19.612 23.027 24 18.062 24 12.073z"
+                  />
+                </svg>
+              </a>
+            </div>
+          </div>
+
+          <!-- Column 2: Legal Details -->
+          <div class="footer-info-col">
+            <div class="footer-info-title">بيانات الشركة</div>
+            <ul class="footer-info-list">
+              <li>شركة الإجازة الذهبية للسفر والسياحة</li>
+              <li>شركة شخص واحد ذات مسؤولية محدودة</li>
+              <li>وكيل سفر وسياحة ترخيص رقم 73101947</li>
+            </ul>
+          </div>
+
+          <!-- Column 3: Commercial Record & Tax -->
+          <div class="footer-info-col">
+            <div class="footer-info-title">التراخيص والسجلات</div>
+            <ul class="footer-info-list">
+              <li>سجل تجاري: 1010324669 الرياض - الرمز البريدي 14215</li>
+              <li>الرقم الضريبي: 310196458200003</li>
+              <li>تأسست منذ 2012</li>
+            </ul>
+          </div>
+
+          <!-- Column 4: Back to Top -->
+          <div>
+            <button
+              class="footer-back-top"
+              id="backToTop"
+              aria-label="العودة لأعلى الصفحة"
+            >
+              <span>العودة للأعلى</span>
+              <span style="font-size: 1.1rem">↑</span>
+            </button>
+          </div>
+        </div>
+
+        <!-- Bottom Bar -->
+        <div class="footer-bottom-bar">
+          <div>© Golden Vacation — Travel & Tourism. جميع الحقوق محفوظة</div>
+          <div></div>
+        </div>
+      </div>
+    </footer>
+
+    <!-- ========================================================================
+       Destination Detail Modal
+       ======================================================================== -->
+    <div
+      class="modal-backdrop"
+      id="destinationModal"
+      role="dialog"
+      aria-modal="true"
+      aria-labelledby="modalTitle"
+    >
+      <div class="modal-container">
+        <div class="modal-header-img">
+          <img src="" alt="" id="modalImg" />
+          <button
+            class="modal-close-btn"
+            id="modalClose"
+            aria-label="إغلاق النافذة"
+          >
+            ✕
+          </button>
+        </div>
+        <div class="modal-content-body">
+          <div class="modal-top-row">
+            <div class="modal-dest-tag" id="modalTag">01 / ASIA</div>
+            <div class="modal-duration-tag" id="modalDurationTag">7 ليالي</div>
+          </div>
+
+          <h3 class="modal-dest-title" id="modalTitle">اسم الوجهة</h3>
+
+          <!-- Price Banner -->
+          <div class="modal-price-banner">
+            <span class="price-banner-label">السعر لشخصين:</span>
+            <span class="price-banner-val" id="modalPrice"
+              >9,900 ريال سعودي</span
+            >
+          </div>
+
+          <p class="modal-dest-desc" id="modalDesc">
+            تفاصيل الرحلة والبرنامج...
+          </p>
+
+          <!-- Inclusions Box -->
+          <div class="modal-inclusions-box">
+            <div class="inclusions-title">
+              <svg
+                width="18"
+                height="18"
+                viewBox="0 0 24 24"
+                fill="none"
+                stroke="#C99738"
+                stroke-width="2.5"
+                stroke-linecap="round"
+                stroke-linejoin="round"
+              >
+                <path d="M22 11.08V12a10 10 0 1 1-5.93-9.14"></path>
+                <polyline points="22 4 12 14.01 9 11.01"></polyline>
+              </svg>
+              <span>تفاصيل ما يشمله العرض:</span>
+            </div>
+            <p class="inclusions-text" id="modalIncludes">
+              يشمل العرض الإقامة والتنقلات من وإلى المطار والقطار بين المدينتين.
+            </p>
+          </div>
+
+          <div class="modal-highlights">
+            <div class="highlight-box">
+              <div class="highlight-val" id="modalDuration">7 ليالي</div>
+              <div class="highlight-label">مدة الإقامة</div>
+            </div>
+            <div class="highlight-box">
+              <div class="highlight-val" id="modalTarget">شخصين</div>
+              <div class="highlight-label">المسافرين</div>
+            </div>
+            <div class="highlight-box">
+              <div class="highlight-val" id="modalType">استرخاء</div>
+              <div class="highlight-label">نوع الإجازة</div>
+            </div>
+          </div>
+
+          <div class="modal-actions-group">
+            <button class="btn-primary" id="modalBookBtn">
+              <span>طلب حجز الباقة</span>
+              <svg
+                class="arrow-icon"
+                viewBox="0 0 24 24"
+                fill="none"
+                stroke="currentColor"
+                stroke-width="2.5"
+                stroke-linecap="round"
+                stroke-linejoin="round"
+              >
+                <line x1="17" y1="7" x2="7" y2="17"></line>
+                <polyline points="17 17 7 17 7 7"></polyline>
+              </svg>
+            </button>
+
+            <a
+              href="#"
+              target="_blank"
+              rel="noopener noreferrer"
+              class="btn-whatsapp-modal"
+              id="modalWhatsappLink"
+            >
+              <svg
+                width="20"
+                height="20"
+                viewBox="0 0 24 24"
+                fill="currentColor"
+              >
+                <path
+                  d="M.057 24l1.687-6.163c-1.041-1.804-1.588-3.849-1.587-5.946.003-6.556 5.338-11.891 11.893-11.891 3.181.001 6.167 1.24 8.413 3.488 2.245 2.248 3.481 5.236 3.48 8.414-.003 6.557-5.338 11.892-11.893 11.892-1.99-.001-3.951-.5-5.688-1.448l-6.305 1.654zm6.597-3.807c1.676.995 3.276 1.591 5.392 1.592 5.448 0 9.886-4.434 9.889-9.885.002-5.462-4.415-9.89-9.881-9.892-5.452 0-9.887 4.434-9.889 9.884-.001 2.225.651 3.891 1.746 5.634l-.999 3.648 3.742-.981zm11.387-5.464c-.074-.124-.272-.198-.57-.347-.297-.149-1.758-.868-2.031-.967-.272-.099-.47-.149-.669.149-.198.297-.768.967-.941 1.165-.173.198-.347.223-.644.074-.297-.149-1.255-.462-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.297-.347.446-.521.151-.172.2-.296.3-.495.099-.198.05-.372-.025-.521-.075-.148-.669-1.611-.916-2.206-.242-.579-.487-.501-.669-.51l-.57-.01c-.198 0-.52.074-.792.372s-1.04 1.016-1.04 2.479 1.065 2.876 1.213 3.074c.149.198 2.095 3.2 5.076 4.487.709.306 1.263.489 1.694.626.712.226 1.36.194 1.872.118.571-.085 1.758-.719 2.006-1.413.248-.695.248-1.29.173-1.414z"
+                />
+              </svg>
+              <span>استفسار واتساب</span>
+            </a>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <!-- Floating WhatsApp Quick Button -->
+    <a
+      href="https://wa.me/966551433434?text=%D9%85%D8%B1%D8%AD%D8%A8%D8%A7%D9%8B%D8%8C%20%D8%A3%D8%B1%D8%BA%D8%A8%20%D8%A8%D8%A7%D9%84%D8%AA%D9%88%D8%A7%D8%B5%D9%84%20%D8%A8%D8%AE%D8%B5%D9%88%D8%B5%20%D8%B9%D8%B1%D9%88%D8%B6%20%D8%A7%D9%84%D8%B3%D9%81%D8%B1%20%D9%81%D9%8A%20%D8%A7%D9%84%D8%A5%D8%AC%D8%A7%D8%B2%D8%A9%20%D8%A7%D9%84%D8%B0%D9%87%D8%A8%D9%8A%D8%A9%20%7BG2%7D"
+      target="_blank"
+      rel="noopener noreferrer"
+      class="floating-whatsapp-btn"
+      id="floatingWhatsappBtn"
+      aria-label="تواصل مباشر عبر واتساب"
+      title="تواصل مباشر عبر واتساب"
+    >
+      <svg width="34" height="34" viewBox="0 0 24 24" fill="currentColor">
+        <path
+          d="M.057 24l1.687-6.163c-1.041-1.804-1.588-3.849-1.587-5.946.003-6.556 5.338-11.891 11.893-11.891 3.181.001 6.167 1.24 8.413 3.488 2.245 2.248 3.481 5.236 3.48 8.414-.003 6.557-5.338 11.892-11.893 11.892-1.99-.001-3.951-.5-5.688-1.448l-6.305 1.654zm6.597-3.807c1.676.995 3.276 1.591 5.392 1.592 5.448 0 9.886-4.434 9.889-9.885.002-5.462-4.415-9.89-9.881-9.892-5.452 0-9.887 4.434-9.889 9.884-.001 2.225.651 3.891 1.746 5.634l-.999 3.648 3.742-.981zm11.387-5.464c-.074-.124-.272-.198-.57-.347-.297-.149-1.758-.868-2.031-.967-.272-.099-.47-.149-.669.149-.198.297-.768.967-.941 1.165-.173.198-.347.223-.644.074-.297-.149-1.255-.462-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.297-.347.446-.521.151-.172.2-.296.3-.495.099-.198.05-.372-.025-.521-.075-.148-.669-1.611-.916-2.206-.242-.579-.487-.501-.669-.51l-.57-.01c-.198 0-.52.074-.792.372s-1.04 1.016-1.04 2.479 1.065 2.876 1.213 3.074c.149.198 2.095 3.2 5.076 4.487.709.306 1.263.489 1.694.626.712.226 1.36.194 1.872.118.571-.085 1.758-.719 2.006-1.413.248-.695.248-1.29.173-1.414z"
+        />
+      </svg>
+      <span class="floating-whatsapp-tooltip"
+        >تحدث مباشرة مع مستشارك السياحي</span
+      >
+    </a>
+
+    <!-- Toast Notification -->
+    <div
+      class="toast-notice"
+      id="toastNotice"
+      role="alert"
+      aria-live="assertive"
+    >
+      <svg
+        width="22"
+        height="22"
+        viewBox="0 0 24 24"
+        fill="none"
+        stroke="#C99738"
+        stroke-width="2.5"
+        stroke-linecap="round"
+        stroke-linejoin="round"
+      >
+        <path d="M22 11.08V12a10 10 0 1 1-5.93-9.14"></path>
+        <polyline points="22 4 12 14.01 9 11.01"></polyline>
+      </svg>
+      <span id="toastText">تم تنفيذ طلبك بنجاح!</span>
+    </div>
+
+    <!-- Scripts -->
+    <script src="app.js?v=6.0"></script>
+  </body>
+</html>

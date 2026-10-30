@@ -186,19 +186,39 @@ document.addEventListener('DOMContentLoaded', () => {
   const WHATSAPP_PHONE = '966551433434';
 
   function detectTrafficSource() {
+    // 0. Explicit data-source on body/html (allows dedicated snap.html / google.html)
+    const bodySource = (
+      document.body?.getAttribute('data-source') ||
+      document.documentElement?.getAttribute('data-source') ||
+      ''
+    ).toLowerCase();
+
+    if (bodySource === 'snapchat' || bodySource === 'snap' || bodySource === 's2') {
+      return { platform: 'snapchat', tag: '{S2}', label: 'سناب شات' };
+    }
+    if (bodySource === 'google' || bodySource === 'g2') {
+      return { platform: 'google', tag: '{G2}', label: 'إعلانات جوجل' };
+    }
+
     const urlParams = new URLSearchParams(window.location.search);
     const referrer = (document.referrer || '').toLowerCase();
     const search = window.location.search.toLowerCase();
     const hash = window.location.hash.toLowerCase();
+    const pathname = window.location.pathname.toLowerCase();
+    const hostname = window.location.hostname.toLowerCase();
 
-    // Check Snapchat indicators
+    // Check Snapchat indicators (pathname, hostname, url params, hash, referrer)
     const isSnap =
+      pathname.includes('snap') ||
+      hostname.includes('snap') ||
       urlParams.get('source') === 'snapchat' ||
       urlParams.get('source') === 'snap' ||
       urlParams.get('utm_source') === 'snapchat' ||
       urlParams.get('utm_source') === 'snap' ||
       urlParams.get('src') === 'snap' ||
       urlParams.get('platform') === 'snapchat' ||
+      urlParams.get('platform') === 'snap' ||
+      urlParams.get('utm_campaign')?.toLowerCase().includes('snap') ||
       urlParams.has('s2') ||
       urlParams.has('snap') ||
       urlParams.has('snapchat') ||
@@ -206,20 +226,25 @@ document.addEventListener('DOMContentLoaded', () => {
       search.includes('source=snap') ||
       search.includes('utm_source=snap') ||
       hash.includes('snap') ||
+      hash.includes('s2') ||
       referrer.includes('snapchat');
 
-    // Check Google indicators
+    // Check Google indicators (pathname, hostname, url params, hash, referrer)
     const isGoogle =
+      pathname.includes('google') ||
+      hostname.includes('google') ||
       urlParams.get('source') === 'google' ||
       urlParams.get('utm_source') === 'google' ||
       urlParams.get('src') === 'google' ||
       urlParams.get('platform') === 'google' ||
+      urlParams.get('utm_campaign')?.toLowerCase().includes('google') ||
       urlParams.has('g2') ||
       urlParams.has('google') ||
       urlParams.has('gclid') || // Google Ads Click ID
       search.includes('source=google') ||
       search.includes('utm_source=google') ||
       hash.includes('google') ||
+      hash.includes('g2') ||
       referrer.includes('google');
 
     if (isSnap) {
