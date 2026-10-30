@@ -1,0 +1,7 @@
+{
+  "cleanUrls": true,
+  "rewrites": [
+    { "source": "/snap", "destination": "/snap.html" },
+    { "source": "/google", "destination": "/google.html" }
+  ]
+}

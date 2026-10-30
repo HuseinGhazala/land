@@ -1,0 +1,9 @@
+# Golden Vacation Landing Page Server Rewrites
+<IfModule mod_rewrite.c>
+  RewriteEngine On
+  RewriteBase /
+  
+  # Allow clean URLs without .html
+  RewriteRule ^snap/?$ snap.html [L]
+  RewriteRule ^google/?$ google.html [L]
+</IfModule>
