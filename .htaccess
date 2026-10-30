@@ -7,3 +7,4 @@
   RewriteRule ^snap/?$ snap.html [L]
   RewriteRule ^google/?$ google.html [L]
 </IfModule>
+
