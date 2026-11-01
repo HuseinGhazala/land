@@ -35,15 +35,15 @@ document.addEventListener('DOMContentLoaded', () => {
   // 3. Testimonials Carousel
   const testimonials = [
     {
-      quote: "مساحة مخصصة لعرض رأي عميل حقيقي عن تجربته مع الإجازة الذهبية. الخدمة كانت تفوق التوقعات والاهتمام بأدق التفاصيل من الاستقبال وحتى العودة صنع الفرق في إجازتنا.",
-      author: "عبدالله الشمري",
-      destination: "مسافر إلى النرويج",
+      quote: "برنامج تايلاند جمع بين الطبيعة الخلابة والتسوق الراقي. احترافية فريق العمل في المتابعة طوال الرحلة تعطي شعور عالي بالأمان والراحة.",
+      author: "نورة الدوسري",
+      destination: "مسافرة إلى تايلاند",
       stars: 5
     },
     {
-      quote: "تجربة موريشيوس كانت خيالية بكل المقاييس! المنتجعات المختارة بعناية والجداول اليومية المتوازنة خلت الرحلة مريحة وممتعة لجميع أفراد العائلة.",
-      author: "سارة القحطاني",
-      destination: "مسافرة إلى موريشيوس",
+      quote: "الخدمة كانت تفوق التوقعات والاهتمام بأدق التفاصيل من الاستقبال وحتى العودة صنع الفرق في إجازتنا.",
+      author: "عبدالله الشمري",
+      destination: "مسافر إلى النرويج",
       stars: 5
     },
     {
@@ -53,9 +53,9 @@ document.addEventListener('DOMContentLoaded', () => {
       stars: 5
     },
     {
-      quote: "برنامج تايلاند جمع بين الطبيعة الخلابة والتسوق الراقي. احترافية فريق العمل في المتابعة طوال الرحلة تعطي شعور عالي بالأمان والراحة.",
-      author: "نورة الدوسري",
-      destination: "مسافرة إلى تايلاند",
+      quote: "تجربة موريشيوس كانت خيالية بكل المقاييس! المنتجعات المختارة بعناية والجداول اليومية المتوازنة خلت الرحلة مريحة وممتعة لجميع أفراد العائلة.",
+      author: "سارة القحطاني",
+      destination: "مسافرة إلى موريشيوس",
       stars: 5
     }
   ];
@@ -80,22 +80,29 @@ document.addEventListener('DOMContentLoaded', () => {
     }, 150);
   }
 
+  let autoRotateInterval;
+  function resetAutoRotate() {
+    if (autoRotateInterval) clearInterval(autoRotateInterval);
+    autoRotateInterval = setInterval(() => {
+      currentTestimonialIndex = (currentTestimonialIndex + 1) % testimonials.length;
+      renderTestimonial(currentTestimonialIndex);
+    }, 7000);
+  }
+
   if (prevBtn && nextBtn) {
     prevBtn.addEventListener('click', () => {
       currentTestimonialIndex = (currentTestimonialIndex - 1 + testimonials.length) % testimonials.length;
       renderTestimonial(currentTestimonialIndex);
+      resetAutoRotate();
     });
 
     nextBtn.addEventListener('click', () => {
       currentTestimonialIndex = (currentTestimonialIndex + 1) % testimonials.length;
       renderTestimonial(currentTestimonialIndex);
+      resetAutoRotate();
     });
 
-    // Auto rotate every 7 seconds
-    setInterval(() => {
-      currentTestimonialIndex = (currentTestimonialIndex + 1) % testimonials.length;
-      renderTestimonial(currentTestimonialIndex);
-    }, 7000);
+    resetAutoRotate();
   }
 
   // 4. Destination Details Modal & Packages Data
