@@ -486,9 +486,26 @@ document.addEventListener('DOMContentLoaded', () => {
     const nameError = document.getElementById('nameError');
     const destSelect = document.getElementById('destinationSelect');
     const travelersSelect = document.getElementById('travelersSelect');
-    const dateSelect = document.getElementById('travelDateSelect');
+    const startDateInput = document.getElementById('startDate');
+    const endDateInput = document.getElementById('endDate');
     const budgetSelect = document.getElementById('budgetSelect');
     const agreementCheckbox = document.getElementById('agreementCheckbox');
+
+    // Date Picker Constraints & Dynamic sync
+    if (startDateInput && endDateInput) {
+      const today = new Date().toISOString().split('T')[0];
+      startDateInput.min = today;
+      endDateInput.min = today;
+
+      startDateInput.addEventListener('change', () => {
+        if (startDateInput.value) {
+          endDateInput.min = startDateInput.value;
+          if (endDateInput.value && endDateInput.value < startDateInput.value) {
+            endDateInput.value = startDateInput.value;
+          }
+        }
+      });
+    }
 
     // Phone Validation Helper
     function validatePhoneNumber(showError = false) {
@@ -670,22 +687,50 @@ document.addEventListener('DOMContentLoaded', () => {
       const submitBtn = bookingForm.querySelector('button[type="submit"]');
       const originalBtnHTML = submitBtn.innerHTML;
       submitBtn.disabled = true;
-      submitBtn.innerHTML = 'جاري إرسال طلبك... ⏳';
+      submitBtn.innerHTML = 'جاري التحويل للواتساب... ⏳';
       isFormSubmitting = true;
 
       const name = nameInput.value.trim();
       const phone = phoneInput.value.trim();
       const destinationText = destSelect.options[destSelect.selectedIndex]?.text || destination;
       const travelersText = travelersSelect.options[travelersSelect.selectedIndex]?.text || '';
-      const travelDateText = dateSelect ? (dateSelect.options[dateSelect.selectedIndex]?.text || 'غير محدد') : 'غير محدد';
-      const budgetText = budgetSelect ? (budgetSelect.options[budgetSelect.selectedIndex]?.text || 'غير محدد') : 'غير محدد';
+      
+      // Format travel dates (start & end)
+      let travelDateText = 'غير محدد';
+      const startVal = startDateInput ? startDateInput.value : '';
+      const endVal = endDateInput ? endDateInput.value : '';
+      if (startVal && endVal) {
+        travelDateText = `من ${startVal} إلى ${endVal}`;
+      } else if (startVal) {
+        travelDateText = `من ${startVal}`;
+      } else if (endVal) {
+        travelDateText = `حتى ${endVal}`;
+      }
 
+      const budgetText = budgetSelect && budgetSelect.value ? (budgetSelect.options[budgetSelect.selectedIndex]?.text || budgetSelect.value) : 'غير محدد';
       const traffic = detectTrafficSource();
+
+      // Construct ready WhatsApp message with all details and campaign tag
+      const waMsgLines = [
+        'مرحباً شركة الإجازة الذهبية، أود طلب حجز وتنسيق رحلة سياحية بالتفاصيل التالية:',
+        '',
+        `👤 الاسم: ${name}`,
+        `📱 الجوال: ${phone}`,
+        `🌍 الوجهة: ${destinationText}`,
+        `👥 عدد المسافرين: ${travelersText || 'غير محدد'}`,
+        `📅 موعد السفر: ${travelDateText}`,
+        `💰 الميزانية: ${budgetText}`,
+        '',
+        `${traffic.tag}`
+      ];
+      const waUrl = `https://wa.me/${WHATSAPP_PHONE}?text=${encodeURIComponent(waMsgLines.join('\n'))}`;
+
+      // Background payload for Google Sheets & backup
       const payload = {
         fullName: name,
         phoneNumber: phone,
         destination: destinationText,
-        travelers: travelersText,
+        travelers: travelersText || 'غير محدد',
         travelDate: travelDateText,
         budget: budgetText,
         campaignSource: traffic.platform === 'snapchat' ? 'سناب شات {S2}' : 'إعلانات جوجل {G2}',
@@ -694,6 +739,7 @@ document.addEventListener('DOMContentLoaded', () => {
       };
 
       try {
+        // Send asynchronously to Google Sheets without blocking WhatsApp redirect
         if (GOOGLE_SHEET_URL && GOOGLE_SHEET_URL.startsWith('http')) {
           const formBody = new URLSearchParams();
           for (const key in payload) {
@@ -701,14 +747,14 @@ document.addEventListener('DOMContentLoaded', () => {
           }
 
           const fetchUrl = `${GOOGLE_SHEET_URL}?${formBody.toString()}`;
-          await fetch(fetchUrl, {
+          fetch(fetchUrl, {
             method: 'POST',
             mode: 'no-cors',
             headers: {
               'Content-Type': 'application/x-www-form-urlencoded'
             },
             body: formBody.toString()
-          });
+          }).catch(err => console.error('Sheet sync error:', err));
         }
 
         // Save local backup in browser storage
@@ -718,34 +764,36 @@ document.addEventListener('DOMContentLoaded', () => {
           localStorage.setItem('gv_leads', JSON.stringify(existing));
         } catch (e) {}
 
-        // Success Feedback
-        showToast('تم استلام طلبك بنجاح! سيتواصل معك مستشارك السياحي قريباً.');
-        bookingForm.reset();
-        nameInput.classList.remove('is-valid', 'is-invalid');
-        phoneInput.classList.remove('is-valid', 'is-invalid');
-        if (nameError) nameError.style.display = 'none';
-        if (phoneError) phoneError.style.display = 'none';
-
-        submitBtn.innerHTML = 'تم الإرسال بنجاح ✓';
-        submitBtn.style.backgroundColor = '#10B981';
+        // Visual feedback
+        submitBtn.innerHTML = 'جاري فتح واتساب... ✓';
+        submitBtn.style.backgroundColor = '#25D366';
         submitBtn.style.color = '#FFFFFF';
+
+        // Redirect directly to WhatsApp
+        const isMobile = /Android|iPhone|iPad|iPod|Opera Mini|IEMobile|WPDesktop/i.test(navigator.userAgent);
+        if (isMobile) {
+          window.location.href = waUrl;
+        } else {
+          window.open(waUrl, '_blank');
+        }
 
         setTimeout(() => {
           submitBtn.disabled = false;
           submitBtn.innerHTML = originalBtnHTML;
           submitBtn.style.backgroundColor = '';
           submitBtn.style.color = '';
-        }, 4000);
+        }, 3000);
 
       } catch (err) {
         console.error('Submission error:', err);
-        showToast('حدث خطأ أثناء الإرسال، يرجى المحاولة مرة أخرى أو التواصل عبر واتساب', true);
+        // Fallback: still redirect to WhatsApp even if error occurs
+        window.location.href = waUrl;
         submitBtn.disabled = false;
         submitBtn.innerHTML = originalBtnHTML;
       } finally {
         setTimeout(() => {
           isFormSubmitting = false;
-        }, 3000);
+        }, 2000);
       }
     });
   }

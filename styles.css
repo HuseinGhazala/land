@@ -1150,6 +1150,26 @@ button {
   transition: all var(--transition-fast);
 }
 
+.form-date-input {
+  min-height: 48px;
+  font-family: 'Cairo', system-ui, sans-serif;
+  color: var(--navy-dark);
+  cursor: pointer;
+  direction: rtl;
+  text-align: right;
+}
+
+.form-date-input::-webkit-calendar-picker-indicator {
+  cursor: pointer;
+  filter: invert(0.35) sepia(1) saturate(3) hue-rotate(5deg);
+  opacity: 0.85;
+  transition: opacity 0.2s;
+}
+
+.form-date-input::-webkit-calendar-picker-indicator:hover {
+  opacity: 1;
+}
+
 .form-input::placeholder {
   color: #A0AEC0;
 }
