@@ -591,21 +591,23 @@ button {
 
 .card-top-row {
   display: flex;
-  align-items: center;
+  align-items: flex-start;
   justify-content: space-between;
   width: 100%;
   gap: 0.5rem;
 }
 
 .card-tag {
-  font-size: 0.8rem;
+  font-size: 0.76rem;
   font-weight: 700;
-  letter-spacing: 1.5px;
-  color: rgba(255, 255, 255, 0.9);
-  text-transform: uppercase;
-  font-family: 'Montserrat', system-ui, sans-serif;
-  direction: ltr;
+  letter-spacing: normal;
+  color: rgba(255, 255, 255, 0.92);
+  font-family: 'Cairo', system-ui, sans-serif;
+  direction: rtl;
   display: inline-block;
+  line-height: 1.35;
+  flex: 1;
+  min-width: 0;
 }
 
 .card-duration-badge {
@@ -1471,6 +1473,9 @@ button {
   font-size: 0.85rem;
   font-weight: 800;
   color: var(--gold-primary);
+  font-family: 'Cairo', system-ui, sans-serif;
+  direction: rtl;
+  letter-spacing: normal;
 }
 
 .modal-duration-tag {

@@ -108,7 +108,7 @@ document.addEventListener('DOMContentLoaded', () => {
   // 4. Destination Details Modal & Packages Data
   const destinationData = {
     korea: {
-      tag: "01 / EAST ASIA",
+      tag: "01 / شرق أسيا",
       title: "كوريا الجنوبية | 7 ليالي",
       duration: "7 ليالي",
       price: "9,900 ريال سعودي",
@@ -119,7 +119,7 @@ document.addEventListener('DOMContentLoaded', () => {
       type: "مدن وطبيعة"
     },
     maldives: {
-      tag: "02 / INDIAN OCEAN",
+      tag: "02 / المحيط الهندي",
       title: "المالديف | 4 ليالي",
       duration: "4 ليالي",
       price: "14,620 ريال سعودي",
@@ -130,7 +130,7 @@ document.addEventListener('DOMContentLoaded', () => {
       type: "استرخاء ورومانسية"
     },
     london: {
-      tag: "03 / EUROPE",
+      tag: "03 / أوروبا",
       title: "لندن | 4 ليالي",
       duration: "4 ليالي",
       price: "6,530 ريال سعودي",
@@ -141,7 +141,7 @@ document.addEventListener('DOMContentLoaded', () => {
       type: "عراقة ومعالم"
     },
     norway: {
-      tag: "04 / SCANDINAVIA",
+      tag: "04 / إسكندنافيا (شمال أوروبا)",
       title: "النرويج | 7 ليالي",
       duration: "7 ليالي",
       price: "9,950 ريال سعودي",
@@ -152,7 +152,7 @@ document.addEventListener('DOMContentLoaded', () => {
       type: "طبيعة وشفق قطبي"
     },
     thailand: {
-      tag: "05 / HONEYMOON",
+      tag: "05 / شهر العسل",
       title: "تايلاند | شهر عسل - 8 ليالي",
       duration: "شهر عسل - 8 ليالي",
       price: "6,180 ريال سعودي",
@@ -163,7 +163,7 @@ document.addEventListener('DOMContentLoaded', () => {
       type: "شهر عسل رومانسي"
     },
     georgia: {
-      tag: "06 / CAUCASUS",
+      tag: "06 / القوقاز (بين البحر الأسود وبحر قزوين)",
       title: "جورجيا | 7 ليالي",
       duration: "7 ليالي",
       price: "3,650 ريال سعودي",
@@ -174,7 +174,7 @@ document.addEventListener('DOMContentLoaded', () => {
       type: "جبال وسياحة ساحلية"
     },
     mauritius: {
-      tag: "07 / INDIAN OCEAN",
+      tag: "07 / المحيط الهندي",
       title: "موريشيوس | 5 ليالي",
       duration: "5 ليالي",
       price: "11,650 ريال سعودي",
