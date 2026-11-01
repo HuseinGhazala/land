@@ -43,7 +43,7 @@ document.addEventListener('DOMContentLoaded', () => {
     {
       quote: "الخدمة كانت تفوق التوقعات والاهتمام بأدق التفاصيل من الاستقبال وحتى العودة صنع الفرق في إجازتنا.",
       author: "عبدالله الشمري",
-      destination: "مسافر إلى النرويج",
+      destination: "عميل الإجازة الذهبية",
       stars: 5
     },
     {
@@ -481,8 +481,6 @@ document.addEventListener('DOMContentLoaded', () => {
     let isFormSubmitting = false;
 
     const nameInput = document.getElementById('fullName');
-    const phoneInput = document.getElementById('phoneNumber');
-    const phoneError = document.getElementById('phoneError');
     const nameError = document.getElementById('nameError');
     const destSelect = document.getElementById('destinationSelect');
     const travelersSelect = document.getElementById('travelersSelect');
@@ -505,84 +503,6 @@ document.addEventListener('DOMContentLoaded', () => {
           }
         }
       });
-    }
-
-    // Phone Validation Helper
-    function validatePhoneNumber(showError = false) {
-      if (!phoneInput) return false;
-      const raw = phoneInput.value.trim();
-
-      if (!raw) {
-        if (showError) {
-          phoneInput.classList.add('is-invalid');
-          phoneInput.classList.remove('is-valid');
-          if (phoneError) {
-            phoneError.style.display = 'flex';
-            phoneError.innerHTML = '<svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><circle cx="12" cy="12" r="10"></circle><line x1="12" y1="8" x2="12" y2="12"></line><line x1="12" y1="16" x2="12.01" y2="16"></line></svg> رقم الجوال مطلوب للتواصل وتأكيد الحجز';
-          }
-        } else {
-          phoneInput.classList.remove('is-invalid', 'is-valid');
-          if (phoneError) {
-            phoneError.style.display = 'none';
-            phoneError.innerHTML = '';
-          }
-        }
-        return false;
-      }
-
-      // Check for forbidden characters (anything other than digits, +, spaces, hyphens)
-      if (/[^0-9+\s\-]/.test(raw)) {
-        phoneInput.classList.add('is-invalid');
-        phoneInput.classList.remove('is-valid');
-        if (phoneError) {
-          phoneError.style.display = 'flex';
-          phoneError.innerHTML = '<svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><circle cx="12" cy="12" r="10"></circle><line x1="12" y1="8" x2="12" y2="12"></line><line x1="12" y1="16" x2="12.01" y2="16"></line></svg> يرجى إدخال أرقام فقط بدون أحرف أو رموز';
-        }
-        return false;
-      }
-
-      // Cleaned digits
-      const cleaned = raw.replace(/[\s\-]/g, '');
-
-      // Saudi local formats:
-      // 05XXXXXXXX (10 digits)
-      const isSaudi05 = /^05\d{8}$/.test(cleaned);
-      // 5XXXXXXXX (9 digits starting with 5)
-      const isSaudi5 = /^5\d{8}$/.test(cleaned);
-      // Saudi intl: +9665XXXXXXXX, 009665XXXXXXXX, 9665XXXXXXXX (all total 8 digits after 5)
-      const isSaudiIntl = /^(?:\+966|00966|966)5\d{8}$/.test(cleaned);
-      // General international: e.g. + followed by 8 to 15 digits or standard intl
-      const isGeneralIntl = /^\+?[1-9]\d{7,14}$/.test(cleaned);
-
-      if (isSaudi05 || isSaudi5 || isSaudiIntl || isGeneralIntl) {
-        phoneInput.classList.remove('is-invalid');
-        phoneInput.classList.add('is-valid');
-        if (phoneError) {
-          phoneError.style.display = 'none';
-          phoneError.innerHTML = '';
-        }
-        return true;
-      }
-
-      // If invalid, construct helpful message
-      let errorMsg = 'يرجى إدخال رقم جوال صحيح (مثال: 05XXXXXXXX أو +9665XXXXXXXX)';
-      if (cleaned.startsWith('05') && cleaned.length !== 10) {
-        errorMsg = 'رقم الجوال السعودي يتكون من 10 أرقام ويبدأ بـ 05 (حالياً ' + cleaned.length + ' أرقام)';
-      } else if (cleaned.startsWith('5') && cleaned.length !== 9) {
-        errorMsg = 'رقم الجوال السعودي يبدأ بـ 05 ويتكون من 10 أرقام (أو 9 أرقام بدءاً بـ 5)';
-      } else if ((cleaned.startsWith('+966') || cleaned.startsWith('00966') || cleaned.startsWith('966')) && !isSaudiIntl) {
-        errorMsg = 'الرقم السعودي الدولي يجب أن يبدأ بـ +9665 متبوعاً بـ 8 أرقام';
-      } else if (cleaned.length < 8) {
-        errorMsg = 'رقم الجوال قصير جداً، يرجى كتابة الرقم كاملاً';
-      }
-
-      phoneInput.classList.add('is-invalid');
-      phoneInput.classList.remove('is-valid');
-      if (phoneError) {
-        phoneError.style.display = 'flex';
-        phoneError.innerHTML = `<svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><circle cx="12" cy="12" r="10"></circle><line x1="12" y1="8" x2="12" y2="12"></line><line x1="12" y1="16" x2="12.01" y2="16"></line></svg> ${errorMsg}`;
-      }
-      return false;
     }
 
     // Name Validation Helper
@@ -624,20 +544,7 @@ document.addEventListener('DOMContentLoaded', () => {
       return true;
     }
 
-    // Interactive Real-Time Validation
-    if (phoneInput) {
-      phoneInput.addEventListener('input', () => {
-        if (phoneInput.classList.contains('is-invalid')) {
-          validatePhoneNumber(true);
-        } else if (phoneInput.value.trim().length >= 9) {
-          validatePhoneNumber(false);
-        }
-      });
-      phoneInput.addEventListener('blur', () => {
-        validatePhoneNumber(true);
-      });
-    }
-
+    // Real-Time Validation
     if (nameInput) {
       nameInput.addEventListener('input', () => {
         if (nameInput.classList.contains('is-invalid')) {
@@ -651,32 +558,32 @@ document.addEventListener('DOMContentLoaded', () => {
       });
     }
 
+    if (destSelect) {
+      destSelect.addEventListener('change', () => {
+        destSelect.classList.remove('is-invalid');
+      });
+    }
+
     bookingForm.addEventListener('submit', async (e) => {
       e.preventDefault();
 
       if (isFormSubmitting) return;
 
       const isNameOk = validateFullName(true);
-      const isPhoneOk = validatePhoneNumber(true);
-
       if (!isNameOk) {
         showToast('يرجى كتابة الاسم الكامل للمتابعة', true);
         nameInput.focus();
         return;
       }
 
-      if (!isPhoneOk) {
-        showToast('يرجى إدخال رقم جوال صحيح (حقل مطلوب)', true);
-        phoneInput.focus();
-        return;
-      }
-
       const destination = destSelect.value;
       if (!destination) {
-        showToast('يرجى اختيار الوجهة أو الباقة المفضلة', true);
+        showToast('يرجى اختيار الوجهة المفضلة', true);
+        destSelect.classList.add('is-invalid');
         destSelect.focus();
         return;
       }
+      destSelect.classList.remove('is-invalid');
 
       const agreement = agreementCheckbox ? agreementCheckbox.checked : true;
       if (!agreement) {
@@ -691,9 +598,8 @@ document.addEventListener('DOMContentLoaded', () => {
       isFormSubmitting = true;
 
       const name = nameInput.value.trim();
-      const phone = phoneInput.value.trim();
       const destinationText = destSelect.options[destSelect.selectedIndex]?.text || destination;
-      const travelersText = travelersSelect.options[travelersSelect.selectedIndex]?.text || '';
+      const travelersText = travelersSelect && travelersSelect.selectedIndex > 0 ? travelersSelect.options[travelersSelect.selectedIndex]?.text : '';
       
       // Format travel dates (start & end)
       let travelDateText = 'غير محدد';
@@ -707,7 +613,7 @@ document.addEventListener('DOMContentLoaded', () => {
         travelDateText = `حتى ${endVal}`;
       }
 
-      const budgetText = budgetSelect && budgetSelect.value ? (budgetSelect.options[budgetSelect.selectedIndex]?.text || budgetSelect.value) : 'غير محدد';
+      const budgetText = budgetSelect && budgetSelect.selectedIndex > 0 ? (budgetSelect.options[budgetSelect.selectedIndex]?.text || budgetSelect.value) : 'غير محدد';
       const traffic = detectTrafficSource();
 
       // Construct ready WhatsApp message with all details and campaign tag
@@ -715,7 +621,6 @@ document.addEventListener('DOMContentLoaded', () => {
         'مرحباً شركة الإجازة الذهبية، أود طلب حجز وتنسيق رحلة سياحية بالتفاصيل التالية:',
         '',
         `👤 الاسم: ${name}`,
-        `📱 الجوال: ${phone}`,
         `🌍 الوجهة: ${destinationText}`,
         `👥 عدد المسافرين: ${travelersText || 'غير محدد'}`,
         `📅 موعد السفر: ${travelDateText}`,
@@ -728,7 +633,7 @@ document.addEventListener('DOMContentLoaded', () => {
       // Background payload for Google Sheets & backup
       const payload = {
         fullName: name,
-        phoneNumber: phone,
+        phoneNumber: 'عبر واتساب مباشر',
         destination: destinationText,
         travelers: travelersText || 'غير محدد',
         travelDate: travelDateText,

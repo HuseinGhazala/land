@@ -695,8 +695,7 @@ button {
 .features-section {
   padding-top: 6rem;
   padding-bottom: 6rem;
-  background-color: var(--cream-bg);
-  border-top: 1px solid var(--cream-border);
+  background-color: var(--white);
   border-bottom: 1px solid var(--cream-border);
 }
 
@@ -980,9 +979,11 @@ button {
    Booking & Consultation Section ("إجازتك الجاية؟ خلّنا نرتبها.")
    ========================================================================== */
 .booking-section {
-  padding-top: 6.5rem;
-  padding-bottom: 6.5rem;
-  background-color: var(--white);
+  padding-top: 6rem;
+  padding-bottom: 6rem;
+  background-color: var(--cream-bg);
+  border-top: 1px solid var(--cream-border);
+  border-bottom: 1px solid var(--cream-border);
 }
 
 .booking-layout {

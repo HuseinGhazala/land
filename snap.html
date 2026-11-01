@@ -51,9 +51,9 @@
             <li>
               <a href="#destinations" class="nav-link">البرامج السياحية</a>
             </li>
+            <li><a href="#booking" class="nav-link">تواصل معنا</a></li>
             <li><a href="#features" class="nav-link">مميزاتنا</a></li>
             <li><a href="#testimonials" class="nav-link">آراء العملاء</a></li>
-            <li><a href="#booking" class="nav-link">تواصل معنا</a></li>
           </ul>
         </nav>
 
@@ -625,6 +625,187 @@
     </section>
 
     <!-- ========================================================================
+       Booking & Consultation Section ("إجازتك الجاية؟ خلّنا نرتبها.")
+       ======================================================================== -->
+    <section class="booking-section" id="booking">
+      <div class="container booking-layout">
+        <!-- Right Column: Heading & WhatsApp CTA -->
+        <div class="booking-text-col">
+          <h2 class="booking-heading">
+            <span class="line-dark">إجازتك الجاية؟</span>
+            <span class="line-gold">خلّنا نرتبها.</span>
+          </h2>
+          <p class="booking-desc">
+            عبّ بياناتك، وفريقنا يتواصل معك عشان يساعدك تختار الوجهة والبرنامج
+            الأنسب لك بكل راحة وسهولة.
+          </p>
+
+          <!-- Trust Indicator Box -->
+          <div class="trust-badge-box">
+            <div class="trust-dot"></div>
+            <div>
+              <div class="trust-title">خطوتك الأولى بسيطة</div>
+              <div class="trust-subtitle">أرسل طلبك، وخل الباقي علينا.</div>
+            </div>
+          </div>
+
+          <!-- WhatsApp Quick Link -->
+          <a
+            href="https://wa.me/966551433434?text=%D9%85%D8%B1%D8%AD%D8%A8%D8%A7%D9%8B%D8%8C%20%D8%A3%D8%B1%D8%BA%D8%A8%20%D8%A8%D8%A7%D9%84%D8%A7%D8%B3%D8%AA%D9%81%D8%B3%D8%A7%D8%B1%20%D8%B9%D9%86%20%D8%A8%D8%B1%D8%A7%D9%85%D8%AC%20%D8%A7%D9%84%D8%A5%D8%AC%D8%A7%D8%B2%D8%A9%20%D8%A7%D9%84%D8%B0%D9%87%D8%A8%D9%8A%D8%A9%20%7BS2%7D"
+            target="_blank"
+            rel="noopener noreferrer"
+            class="whatsapp-direct-btn"
+            id="directWhatsappBtn"
+          >
+            <svg width="22" height="22" viewBox="0 0 24 24" fill="currentColor">
+              <path
+                d="M.057 24l1.687-6.163c-1.041-1.804-1.588-3.849-1.587-5.946.003-6.556 5.338-11.891 11.893-11.891 3.181.001 6.167 1.24 8.413 3.488 2.245 2.248 3.481 5.236 3.48 8.414-.003 6.557-5.338 11.892-11.893 11.892-1.99-.001-3.951-.5-5.688-1.448l-6.305 1.654zm6.597-3.807c1.676.995 3.276 1.591 5.392 1.592 5.448 0 9.886-4.434 9.889-9.885.002-5.462-4.415-9.89-9.881-9.892-5.452 0-9.887 4.434-9.889 9.884-.001 2.225.651 3.891 1.746 5.634l-.999 3.648 3.742-.981zm11.387-5.464c-.074-.124-.272-.198-.57-.347-.297-.149-1.758-.868-2.031-.967-.272-.099-.47-.149-.669.149-.198.297-.768.967-.941 1.165-.173.198-.347.223-.644.074-.297-.149-1.255-.462-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.297-.347.446-.521.151-.172.2-.296.3-.495.099-.198.05-.372-.025-.521-.075-.148-.669-1.611-.916-2.206-.242-.579-.487-.501-.669-.51l-.57-.01c-.198 0-.52.074-.792.372s-1.04 1.016-1.04 2.479 1.065 2.876 1.213 3.074c.149.198 2.095 3.2 5.076 4.487.709.306 1.263.489 1.694.626.712.226 1.36.194 1.872.118.571-.085 1.758-.719 2.006-1.413.248-.695.248-1.29.173-1.414z"
+              />
+            </svg>
+            <span>تواصل سريع عبر واتساب</span>
+          </a>
+        </div>
+
+        <!-- Left Column: Interactive Booking Form -->
+        <div class="form-card">
+          <div class="form-header">
+            <h3 class="form-title">خلّنا نعرف وش يناسبك</h3>
+            <span class="form-step-tag">1 / 1</span>
+          </div>
+
+          <form class="booking-form" id="bookingForm" novalidate>
+            <!-- Full Name -->
+            <div class="form-group">
+              <label for="fullName" class="form-label"
+                >الاسم الكامل <span class="required-badge">*</span></label
+              >
+              <input
+                type="text"
+                id="fullName"
+                class="form-input"
+                placeholder="اكتب اسمك هنا"
+                required
+                autocomplete="name"
+              />
+              <div
+                class="form-field-error"
+                id="nameError"
+                style="display: none"
+              ></div>
+            </div>
+
+            <!-- Destination & Travelers (2 cols) -->
+            <div class="form-row-2">
+              <div class="form-group">
+                <label for="destinationSelect" class="form-label"
+                  >الوجهة المفضلة <span class="required-badge">*</span></label
+                >
+                <select id="destinationSelect" class="form-select" required>
+                  <option value="" disabled selected>
+                    اختر الوجهة
+                  </option>
+                  <option value="korea">كوريا الجنوبية</option>
+                  <option value="maldives">المالديف</option>
+                  <option value="london">لندن</option>
+                  <option value="norway">النرويج</option>
+                  <option value="thailand">تايلاند</option>
+                  <option value="georgia">جورجيا</option>
+                  <option value="mauritius">موريشيوس</option>
+                  <option value="other">وجهة أخرى</option>
+                </select>
+              </div>
+
+              <div class="form-group">
+                <label for="travelersSelect" class="form-label"
+                  >عدد المسافرين</label
+                >
+                <select id="travelersSelect" class="form-select">
+                  <option value="" disabled selected>اختر العدد</option>
+                  <option value="1">شخص واحد</option>
+                  <option value="2">شخصين</option>
+                  <option value="3-4">عائلة (3 - 4 أشخاص)</option>
+                  <option value="5+">عائلة أو مجموعة (5+ أشخاص)</option>
+                </select>
+              </div>
+            </div>
+
+            <!-- Travel Dates: Start Date & End Date (2 cols) -->
+            <div class="form-row-2">
+              <div class="form-group">
+                <label for="startDate" class="form-label"
+                  >تاريخ المغادرة (البداية)</label
+                >
+                <input
+                  type="date"
+                  id="startDate"
+                  class="form-input form-date-input"
+                  aria-label="تاريخ المغادرة أو بداية الرحلة"
+                />
+              </div>
+
+              <div class="form-group">
+                <label for="endDate" class="form-label"
+                  >تاريخ العودة (النهاية)</label
+                >
+                <input
+                  type="date"
+                  id="endDate"
+                  class="form-input form-date-input"
+                  aria-label="تاريخ العودة أو نهاية الرحلة"
+                />
+              </div>
+            </div>
+
+            <!-- Budget -->
+            <div class="form-group">
+              <label for="budgetSelect" class="form-label"
+                >الميزانية التقريبية</label
+              >
+              <select id="budgetSelect" class="form-select">
+                <option value="" disabled selected>اختر الميزانية</option>
+                <option value="اقتصادية ومدروسة">اقتصادية ومدروسة</option>
+                <option value="متوسطة ومميزة">متوسطة ومميزة</option>
+                <option value="فاخرة VIP">فاخرة VIP</option>
+              </select>
+            </div>
+
+            <!-- Agreement Checkbox -->
+            <label class="form-checkbox-label">
+              <input
+                type="checkbox"
+                id="agreementCheckbox"
+                class="form-checkbox"
+                required
+                checked
+              />
+              <span>أوافق على التواصل معي بخصوص طلب الرحلة.</span>
+            </label>
+
+            <!-- Submit Button (Direct to WhatsApp) -->
+            <button type="submit" class="btn-primary btn-submit-booking">
+              <span>أرسل طلبك</span>
+              <svg
+                width="20"
+                height="20"
+                viewBox="0 0 24 24"
+                fill="currentColor"
+                style="margin-right: 6px"
+              >
+                <path
+                  d="M.057 24l1.687-6.163c-1.041-1.804-1.588-3.849-1.587-5.946.003-6.556 5.338-11.891 11.893-11.891 3.181.001 6.167 1.24 8.413 3.488 2.245 2.248 3.481 5.236 3.48 8.414-.003 6.557-5.338 11.892-11.893 11.892-1.99-.001-3.951-.5-5.688-1.448l-6.305 1.654zm6.597-3.807c1.676.995 3.276 1.591 5.392 1.592 5.448 0 9.886-4.434 9.889-9.885.002-5.462-4.415-9.89-9.881-9.892-5.452 0-9.887 4.434-9.889 9.884-.001 2.225.651 3.891 1.746 5.634l-.999 3.648 3.742-.981zm11.387-5.464c-.074-.124-.272-.198-.57-.347-.297-.149-1.758-.868-2.031-.967-.272-.099-.47-.149-.669.149-.198.297-.768.967-.941 1.165-.173.198-.347.223-.644.074-.297-.149-1.255-.462-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.297-.347.446-.521.151-.172.2-.296.3-.495.099-.198.05-.372-.025-.521-.075-.148-.669-1.611-.916-2.206-.242-.579-.487-.501-.669-.51l-.57-.01c-.198 0-.52.074-.792.372s-1.04 1.016-1.04 2.479 1.065 2.876 1.213 3.074c.149.198 2.095 3.2 5.076 4.487.709.306 1.263.489 1.694.626.712.226 1.36.194 1.872.118.571-.085 1.758-.719 2.006-1.413.248-.695.248-1.29.173-1.414z"
+                />
+              </svg>
+            </button>
+
+            <p class="form-disclaimer">
+              سيتم توجيهك مباشرة إلى محادثة واتساب لتأكيد طلبك وتفاصيل رحلتك فوراً.
+            </p>
+          </form>
+        </div>
+      </div>
+    </section>
+
+    <!-- ========================================================================
        Features Section ("تفاصيل صغيرة، تفرق في الرحلة.")
        ======================================================================== -->
     <section class="features-section" id="features">
@@ -847,211 +1028,6 @@
             <span>آراء</span>
             <span>عملائنا</span>
           </div>
-        </div>
-      </div>
-    </section>
-
-    <!-- ========================================================================
-       Booking & Consultation Section ("إجازتك الجاية؟ خلّنا نرتبها.")
-       ======================================================================== -->
-    <section class="booking-section" id="booking">
-      <div class="container booking-layout">
-        <!-- Right Column: Heading & WhatsApp CTA -->
-        <div class="booking-text-col">
-          <h2 class="booking-heading">
-            <span class="line-dark">إجازتك الجاية؟</span>
-            <span class="line-gold">خلّنا نرتبها.</span>
-          </h2>
-          <p class="booking-desc">
-            عبّ بياناتك، وفريقنا يتواصل معك عشان يساعدك تختار الوجهة والبرنامج
-            الأنسب لك بكل راحة وسهولة.
-          </p>
-
-          <!-- Trust Indicator Box -->
-          <div class="trust-badge-box">
-            <div class="trust-dot"></div>
-            <div>
-              <div class="trust-title">خطوتك الأولى بسيطة</div>
-              <div class="trust-subtitle">أرسل طلبك، وخل الباقي علينا.</div>
-            </div>
-          </div>
-
-          <!-- WhatsApp Quick Link -->
-          <a
-            href="https://wa.me/966551433434?text=%D9%85%D8%B1%D8%AD%D8%A8%D8%A7%D9%8B%D8%8C%20%D8%A3%D8%B1%D8%BA%D8%A8%20%D8%A8%D8%A7%D9%84%D8%A7%D8%B3%D8%AA%D9%81%D8%B3%D8%A7%D8%B1%20%D8%B9%D9%86%20%D8%A8%D8%B1%D8%A7%D9%85%D8%AC%20%D8%A7%D9%84%D8%A5%D8%AC%D8%A7%D8%B2%D8%A9%20%D8%A7%D9%84%D8%B0%D9%87%D8%A8%D9%8A%D8%A9%20%7BS2%7D"
-            target="_blank"
-            rel="noopener noreferrer"
-            class="whatsapp-direct-btn"
-            id="directWhatsappBtn"
-          >
-            <svg width="22" height="22" viewBox="0 0 24 24" fill="currentColor">
-              <path
-                d="M.057 24l1.687-6.163c-1.041-1.804-1.588-3.849-1.587-5.946.003-6.556 5.338-11.891 11.893-11.891 3.181.001 6.167 1.24 8.413 3.488 2.245 2.248 3.481 5.236 3.48 8.414-.003 6.557-5.338 11.892-11.893 11.892-1.99-.001-3.951-.5-5.688-1.448l-6.305 1.654zm6.597-3.807c1.676.995 3.276 1.591 5.392 1.592 5.448 0 9.886-4.434 9.889-9.885.002-5.462-4.415-9.89-9.881-9.892-5.452 0-9.887 4.434-9.889 9.884-.001 2.225.651 3.891 1.746 5.634l-.999 3.648 3.742-.981zm11.387-5.464c-.074-.124-.272-.198-.57-.347-.297-.149-1.758-.868-2.031-.967-.272-.099-.47-.149-.669.149-.198.297-.768.967-.941 1.165-.173.198-.347.223-.644.074-.297-.149-1.255-.462-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.297-.347.446-.521.151-.172.2-.296.3-.495.099-.198.05-.372-.025-.521-.075-.148-.669-1.611-.916-2.206-.242-.579-.487-.501-.669-.51l-.57-.01c-.198 0-.52.074-.792.372s-1.04 1.016-1.04 2.479 1.065 2.876 1.213 3.074c.149.198 2.095 3.2 5.076 4.487.709.306 1.263.489 1.694.626.712.226 1.36.194 1.872.118.571-.085 1.758-.719 2.006-1.413.248-.695.248-1.29.173-1.414z"
-              />
-            </svg>
-            <span>تواصل سريع عبر واتساب</span>
-          </a>
-        </div>
-
-        <!-- Left Column: Interactive Booking Form -->
-        <div class="form-card">
-          <div class="form-header">
-            <h3 class="form-title">خلّنا نعرف وش يناسبك</h3>
-            <span class="form-step-tag">1 / 1</span>
-          </div>
-
-          <form class="booking-form" id="bookingForm" novalidate>
-            <!-- Full Name -->
-            <div class="form-group">
-              <label for="fullName" class="form-label"
-                >الاسم الكامل <span class="required-badge">*</span></label
-              >
-              <input
-                type="text"
-                id="fullName"
-                class="form-input"
-                placeholder="اكتب اسمك هنا"
-                required
-                autocomplete="name"
-              />
-              <div
-                class="form-field-error"
-                id="nameError"
-                style="display: none"
-              ></div>
-            </div>
-
-            <!-- Phone Number -->
-            <div class="form-group">
-              <label for="phoneNumber" class="form-label"
-                >رقم الجوال <span class="required-badge">* (مطلوب)</span></label
-              >
-              <input
-                type="tel"
-                id="phoneNumber"
-                class="form-input"
-                placeholder="+966 5X XXX XXXX"
-                dir="ltr"
-                style="text-align: right"
-                required
-                pattern="^(\+?966|00966|0)?5[0-9]{8}$"
-                inputmode="tel"
-                autocomplete="tel"
-              />
-              <div
-                class="form-field-error"
-                id="phoneError"
-                style="display: none"
-              ></div>
-            </div>
-
-            <!-- Destination & Travelers (2 cols) -->
-            <div class="form-row-2">
-              <div class="form-group">
-                <label for="destinationSelect" class="form-label"
-                  >الوجهة المفضلة</label
-                >
-                <select id="destinationSelect" class="form-select" required>
-                  <option value="" disabled selected>
-                    اختر الوجهة
-                  </option>
-                  <option value="korea">كوريا الجنوبية</option>
-                  <option value="maldives">المالديف</option>
-                  <option value="london">لندن</option>
-                  <option value="norway">النرويج</option>
-                  <option value="thailand">تايلاند</option>
-                  <option value="georgia">جورجيا</option>
-                  <option value="mauritius">موريشيوس</option>
-                  <option value="other">وجهة أخرى</option>
-                </select>
-              </div>
-
-              <div class="form-group">
-                <label for="travelersSelect" class="form-label"
-                  >عدد المسافرين</label
-                >
-                <select id="travelersSelect" class="form-select" required>
-                  <option value="" disabled selected>اختر العدد</option>
-                  <option value="1">شخص واحد</option>
-                  <option value="2">شخصين</option>
-                  <option value="3-4">عائلة (3 - 4 أشخاص)</option>
-                  <option value="5+">عائلة أو مجموعة (5+ أشخاص)</option>
-                </select>
-              </div>
-            </div>
-
-            <!-- Travel Dates: Start Date & End Date (2 cols) -->
-            <div class="form-row-2">
-              <div class="form-group">
-                <label for="startDate" class="form-label"
-                  >تاريخ المغادرة (البداية)</label
-                >
-                <input
-                  type="date"
-                  id="startDate"
-                  class="form-input form-date-input"
-                  aria-label="تاريخ المغادرة أو بداية الرحلة"
-                />
-              </div>
-
-              <div class="form-group">
-                <label for="endDate" class="form-label"
-                  >تاريخ العودة (النهاية)</label
-                >
-                <input
-                  type="date"
-                  id="endDate"
-                  class="form-input form-date-input"
-                  aria-label="تاريخ العودة أو نهاية الرحلة"
-                />
-              </div>
-            </div>
-
-            <!-- Budget -->
-            <div class="form-group">
-              <label for="budgetSelect" class="form-label"
-                >الميزانية التقريبية</label
-              >
-              <select id="budgetSelect" class="form-select">
-                <option value="" disabled selected>اختر الميزانية</option>
-                <option value="اقتصادية ومدروسة">اقتصادية ومدروسة</option>
-                <option value="متوسطة ومميزة">متوسطة ومميزة</option>
-                <option value="فاخرة VIP">فاخرة VIP</option>
-              </select>
-            </div>
-
-            <!-- Agreement Checkbox -->
-            <label class="form-checkbox-label">
-              <input
-                type="checkbox"
-                id="agreementCheckbox"
-                class="form-checkbox"
-                required
-                checked
-              />
-              <span>أوافق على التواصل معي بخصوص طلب الرحلة.</span>
-            </label>
-
-            <!-- Submit Button (Direct to WhatsApp) -->
-            <button type="submit" class="btn-primary btn-submit-booking">
-              <span>أرسل طلبك</span>
-              <svg
-                width="20"
-                height="20"
-                viewBox="0 0 24 24"
-                fill="currentColor"
-                style="margin-right: 6px"
-              >
-                <path
-                  d="M.057 24l1.687-6.163c-1.041-1.804-1.588-3.849-1.587-5.946.003-6.556 5.338-11.891 11.893-11.891 3.181.001 6.167 1.24 8.413 3.488 2.245 2.248 3.481 5.236 3.48 8.414-.003 6.557-5.338 11.892-11.893 11.892-1.99-.001-3.951-.5-5.688-1.448l-6.305 1.654zm6.597-3.807c1.676.995 3.276 1.591 5.392 1.592 5.448 0 9.886-4.434 9.889-9.885.002-5.462-4.415-9.89-9.881-9.892-5.452 0-9.887 4.434-9.889 9.884-.001 2.225.651 3.891 1.746 5.634l-.999 3.648 3.742-.981zm11.387-5.464c-.074-.124-.272-.198-.57-.347-.297-.149-1.758-.868-2.031-.967-.272-.099-.47-.149-.669.149-.198.297-.768.967-.941 1.165-.173.198-.347.223-.644.074-.297-.149-1.255-.462-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.297-.347.446-.521.151-.172.2-.296.3-.495.099-.198.05-.372-.025-.521-.075-.148-.669-1.611-.916-2.206-.242-.579-.487-.501-.669-.51l-.57-.01c-.198 0-.52.074-.792.372s-1.04 1.016-1.04 2.479 1.065 2.876 1.213 3.074c.149.198 2.095 3.2 5.076 4.487.709.306 1.263.489 1.694.626.712.226 1.36.194 1.872.118.571-.085 1.758-.719 2.006-1.413.248-.695.248-1.29.173-1.414z"
-                />
-              </svg>
-            </button>
-
-            <p class="form-disclaimer">
-              سيتم توجيهك مباشرة إلى محادثة واتساب لتأكيد طلبك وتفاصيل رحلتك فوراً.
-            </p>
-          </form>
         </div>
       </div>
     </section>
